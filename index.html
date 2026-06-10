@@ -49,26 +49,31 @@
         </div>
     </nav>
 
-    <header class="w-full bg-white border-b border-gray-100">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-0 min-h-[450px]">
+    <!-- SEÇÃO 1: HERO (Visual Corrigido: Sem Crops e Texto Expandido) -->
+    <header class="w-full bg-white border-b border-gray-100 pb-4">
+        <!-- Adicionamos gap-4 para separar as fotos e p-4 para não colarem na borda da tela -->
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4">
             
-            <div class="relative h-64 md:h-auto overflow-hidden group">
-                <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover transform group-hover:scale-101 transition duration-1000">
-                <div class="absolute inset-0 bg-black/10"></div>
+            <!-- Lado Esquerdo: Aurora (aspect-[4/3] preserva a largura da foto de paisagem) -->
+            <div class="relative overflow-hidden rounded-xl aspect-[4/3] group shadow-sm">
+                <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
+                <div class="absolute inset-0 bg-black/5"></div>
             </div>
             
-            <div class="relative h-64 md:h-auto overflow-hidden group border-t md:border-t-0 md:border-l border-gray-100">
-                <img src="images/hero_interior.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover transform group-hover:scale-101 transition duration-1000">
+            <!-- Lado Direito: Interior Comercial (aspect-[4/3] mostra muito mais a amplitude da sala) -->
+            <div class="relative overflow-hidden rounded-xl aspect-[4/3] group shadow-sm">
+                <img src="images/hero_interior.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
                 <div class="absolute inset-0 bg-black/5"></div>
             </div>
         </div>
         
-        <div class="max-w-3xl mx-auto text-center py-12 px-4">
+        <!-- Texto de Impacto - Expandido de max-w-3xl para max-w-5xl para caber tudo na mesma linha -->
+        <div class="max-w-5xl mx-auto text-center py-10 px-4">
             <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight mb-4">
-                Capturando a luz e a atmosfera do Norte.
+                Capturing the light and atmosphere of the North.
             </h1>
-            <p id="hero-desc" class="text-gray-500 text-md md:text-xl font-light max-w-xl mx-auto">
-                Da imensidão do céu ártico ao conforto do seu lar.
+            <p id="hero-desc" class="text-gray-500 text-base md:text-xl font-light max-w-2xl mx-auto">
+                From the vastness of the Arctic sky to the comfort of your home.
             </p>
         </div>
     </header>
@@ -127,7 +132,7 @@
             <h2 id="footer-title" class="text-lg font-bold text-gray-900 mb-1">Vamos colaborar?</h2>
             <p id="footer-desc" class="text-gray-500 text-sm mb-6 max-w-sm mx-auto">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
             
-            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-gray-900 text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-800 transition shadow-md">
+            <a href="mailto:photos@borealone.com" id="footer-btn" class="inline-block bg-gray-900 text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-800 transition shadow-md">
                 Enviar um E-mail
             </a>
             

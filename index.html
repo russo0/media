@@ -4,94 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boreal One Media | Photography</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
     <link class="apple-touch-icon" href="favicon.png">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brandDark: '#0b0f19',
-                        brandLight: '#f8f9fa',
+                        arcticDark: '#060a13',
+                        aurora: '#00f5d4',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-brandLight text-gray-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <nav class="border-b border-gray-200 bg-white/80 backdrop-blur sticky top-0 z-50">
+    <!-- NAV BAR (Estilo Cinema / Minimalista Escuro) -->
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             
+            <!-- Logo + Nome -->
             <a href="https://borealone.com" class="flex items-center space-x-3 group">
                 <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 object-contain filter drop-shadow-sm">
-                <span class="font-bold text-lg tracking-wider text-gray-900 group-hover:text-gray-600 transition">BOREAL ONE MEDIA</span>
+                <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
             
             <div class="flex items-center space-x-4">
+                <!-- Links de Roteamento -->
                 <div class="hidden sm:flex items-center space-x-2 text-xs font-medium">
-                    <a href="https://borealone.com" id="nav-main-link" class="text-gray-500 hover:text-gray-900 px-3 py-1.5 transition">
+                    <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white px-3 py-1.5 transition">
                         ← Voltar ao Início
                     </a>
-                    <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded transition">
+                    <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-900/50 hover:bg-gray-900 text-gray-300 px-3 py-1.5 rounded border border-gray-800 transition">
                         Cybersecurity & IT →
                     </a>
                 </div>
 
-                <div class="flex space-x-1 bg-gray-100 p-1 rounded border border-gray-200 text-xs font-bold">
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-gray-900 bg-white shadow-sm">EN</button>
-                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-500 hover:text-gray-900">SV</button>
-                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-500 hover:text-gray-900">PT</button>
+                <!-- SELETOR DE IDIOMA -->
+                <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold">
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- SEÇÃO 1: HERO (Visual Corrigido: Proporção Widescreen 16:9) -->
-    <header class="w-full bg-white border-b border-gray-100 pb-4">
-        <!-- Mantém o alinhamento perfeito, mas agora em formato widescreen -->
+    <!-- SEÇÃO 1: HERO (Widescreen Sem Bordas Brancas) -->
+    <header class="w-full bg-[#070b14]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4">
             
-            <!-- Lado Esquerdo: Aurora (Mudado para 16:9 para abrir as laterais da paisagem) -->
-            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-sm">
+            <!-- Lado Esquerdo: Aurora -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
                 <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
-                <div class="absolute inset-0 bg-black/5"></div>
+                <div class="absolute inset-0 bg-black/10"></div>
             </div>
             
-            <!-- Lado Direito: Interior Comercial (Mudado para 16:9 para valorizar a amplitude do ambiente) -->
-            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-sm">
+            <!-- Lado Direito: Interior Comercial -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
                 <img src="images/hero_interior.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
-                <div class="absolute inset-0 bg-black/5"></div>
+                <div class="absolute inset-0 bg-black/10"></div>
             </div>
         </div>
         
-        <!-- Texto de Impacto Alinhado -->
-        <div class="max-w-5xl mx-auto text-center py-10 px-4">
-            <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight mb-4">
+        <!-- Texto de Impacto Elegante -->
+        <div class="max-w-5xl mx-auto text-center py-12 px-4">
+            <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-white tracking-tight leading-tight mb-4 drop-shadow">
                 Capturing the light and atmosphere of the North.
             </h1>
-            <p id="hero-desc" class="text-gray-500 text-base md:text-xl font-light max-w-2xl mx-auto">
+            <p id="hero-desc" class="text-gray-400 text-base md:text-xl font-light max-w-2xl mx-auto">
                 From the vastness of the Arctic sky to the comfort of your home.
             </p>
         </div>
     </header>
-   <!-- SEÇÃO 2: PORTFÓLIO DIVIDIDO (Visual Corrigido: Mosaicos Estilo Galeria de Arte) -->
-    <main class="max-w-6xl mx-auto px-4 py-12 w-full flex-grow">
+
+    <!-- SEÇÃO 2: PORTFÓLIO DIVIDIDO (Mosaicos Premium com efeito Vidro Escuro) -->
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow">
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
             
-            <!-- CARD ESQUERDO: IMOBILIÁRIA (Mosaico de 3 Fotos) -->
-            <div class="bg-white rounded-2xl overflow-hidden border border-gray-200/60 shadow-sm flex flex-col justify-between group hover:shadow-md transition duration-300">
+            <!-- CARD ESQUERDO: IMOBILIÁRIA -->
+            <div class="bg-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
                 
-                <!-- Grade do Mosaico Imobiliário -->
-                <div class="grid grid-cols-3 gap-1.5 p-3 h-56 lg:h-64 bg-gray-50/50">
-                    <!-- Foto Principal (Ocupa 2 colunas) -->
+                <!-- Grade do Mosaico -->
+                <div class="grid grid-cols-3 gap-2 p-3 h-56 lg:h-64 bg-black/20">
                     <div class="col-span-2 rounded-lg overflow-hidden h-full">
                         <img src="images/re_1.jpg" alt="Real Estate 1" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
                     </div>
-                    <!-- Duas Fotos Menores Empilhadas (Ocupam 1 coluna) -->
-                    <div class="col-span-1 grid grid-rows-2 gap-1.5 h-full">
+                    <div class="col-span-1 grid grid-rows-2 gap-2 h-full">
                         <div class="rounded-lg overflow-hidden h-full">
                             <img src="images/re_2.jpg" alt="Real Estate 2" class="w-full h-full object-cover">
                         </div>
@@ -104,28 +108,27 @@
                 <!-- Conteúdo do Card -->
                 <div class="p-6 lg:p-8 flex-grow flex flex-col justify-between items-start">
                     <div>
-                        <h2 id="card1-title" class="text-xl lg:text-2xl font-bold text-gray-900 mb-3">Fotografia Imobiliária & Comercial</h2>
-                        <p id="card1-desc" class="text-gray-600 text-sm lg:text-base leading-relaxed mb-6">
+                        <h2 id="card1-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Fotografia Imobiliária & Comercial</h2>
+                        <p id="card1-desc" class="text-gray-400 text-sm lg:text-base leading-relaxed mb-6">
                             Fotografia profissional para o mercado imobiliário, arquitetura e tours virtuais 360°.
                         </p>
                     </div>
-                    <a href="imobiliaria.html" id="card1-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm px-6 py-3 rounded-lg transition shadow-sm">
+                    <!-- Botão em contraste branco/nítido -->
+                    <a href="imobiliaria.html" id="card1-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-lg transition shadow-md">
                         Ver Portfólio Comercial
                     </a>
                 </div>
             </div>
 
-            <!-- CARD DIREITO: ARTES & PAISAGEM (Mosaico de 3 Fotos) -->
-            <div class="bg-white rounded-2xl overflow-hidden border border-gray-200/60 shadow-sm flex flex-col justify-between group hover:shadow-md transition duration-300">
+            <!-- CARD DIREITO: ARTES & PAISAGEM -->
+            <div class="bg-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
                 
-                <!-- Grade do Mosaico de Paisagem -->
-                <div class="grid grid-cols-3 gap-1.5 p-3 h-56 lg:h-64 bg-gray-50/50">
-                    <!-- Foto Principal (Ocupa 2 colunas) -->
+                <!-- Grade do Mosaico -->
+                <div class="grid grid-cols-3 gap-2 p-3 h-56 lg:h-64 bg-black/20">
                     <div class="col-span-2 rounded-lg overflow-hidden h-full">
                         <img src="images/aurora_1.jpg" alt="Aurora 1" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
                     </div>
-                    <!-- Duas Fotos Menores Empilhadas (Ocupam 1 coluna) -->
-                    <div class="col-span-1 grid grid-rows-2 gap-1.5 h-full">
+                    <div class="col-span-1 grid grid-rows-2 gap-2 h-full">
                         <div class="rounded-lg overflow-hidden h-full">
                             <img src="images/aurora_2.jpg" alt="Aurora 2" class="w-full h-full object-cover">
                         </div>
@@ -138,12 +141,13 @@
                 <!-- Conteúdo do Card -->
                 <div class="p-6 lg:p-8 flex-grow flex flex-col justify-between items-start">
                     <div>
-                        <h2 id="card2-title" class="text-xl lg:text-2xl font-bold text-gray-900 mb-3">Belas Artes & Paisagens Árticas</h2>
-                        <p id="card2-desc" class="text-gray-600 text-sm lg:text-base leading-relaxed mb-6">
+                        <h2 id="card2-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Belas Artes & Paisagens Árticas</h2>
+                        <p id="card2-desc" class="text-gray-400 text-sm lg:text-base leading-relaxed mb-6">
                             Fotografias de paisagem, astrofotografia e impressões Fine Art da natureza nórdica.
                         </p>
                     </div>
-                    <a href="galeria.html" id="card2-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm px-6 py-3 rounded-lg transition shadow-sm">
+                    <!-- Botão em contraste branco/nítido -->
+                    <a href="galeria.html" id="card2-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-lg transition shadow-md">
                         Explorar Galeria Ártica
                     </a>
                 </div>
@@ -151,32 +155,36 @@
 
         </div>
     </main>
-    <section class="w-full bg-white border-t border-b border-gray-200/50 py-16 px-4">
+
+    <!-- SEÇÃO 3: SOBRE (Faixa de Destaque Escura) -->
+    <section class="w-full bg-black/20 border-t border-b border-gray-900 py-16 px-4">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 id="about-title" class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">Rigor Técnico & Sensibilidade Visual</h2>
-            <p id="about-desc" class="text-gray-700 text-base md:text-lg font-light leading-relaxed">
+            <h2 id="about-title" class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Rigor Técnico & Sensibilidade Visual</h2>
+            <p id="about-desc" class="text-gray-300 text-base md:text-lg font-light leading-relaxed">
                 Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.
             </p>
         </div>
     </section>
 
-    <footer class="bg-white w-full py-12 text-center px-4 border-t border-gray-100">
+    <!-- SEÇÃO 4: RODAPÉ & CONTATO -->
+    <footer class="w-full py-12 text-center px-4 bg-[#070b14]">
         <div class="max-w-3xl mx-auto">
-            <h2 id="footer-title" class="text-lg font-bold text-gray-900 mb-1">Vamos colaborar?</h2>
-            <p id="footer-desc" class="text-gray-500 text-sm mb-6 max-w-sm mx-auto">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
+            <h2 id="footer-title" class="text-lg font-bold text-white mb-1">Vamos colaborar?</h2>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
             
-            <a href="mailto:photos@borealone.com" id="footer-btn" class="inline-block bg-gray-900 text-white font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-800 transition shadow-md">
+            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
                 Enviar um E-mail
             </a>
             
-            <p id="footer-notice" class="text-xs text-amber-600 font-medium mt-6 bg-amber-50 inline-block px-3 py-1.5 rounded-full border border-amber-100/70">
+            <p id="footer-notice" class="text-xs text-amber-400/90 font-medium mt-6 bg-amber-950/20 inline-block px-3 py-1.5 rounded-full border border-amber-900/30 backdrop-blur-sm">
                 🔒 Nota: As galerias de entrega para clientes são privadas e protegidas por criptografia.
             </p>
             
-            <p id="footer-rights" class="text-xs text-gray-400 mt-12">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+            <p id="footer-rights" class="text-xs text-gray-600 mt-12">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- SCRIPT DE TRADUÇÃO -->
     <script>
         const translations = {
             en: {
@@ -260,9 +268,9 @@
             ['en', 'sv', 'pt'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
                 if (l === lang) {
-                    btn.className = "px-2 py-1 rounded transition text-gray-900 bg-white shadow-sm";
+                    btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
                 } else {
-                    btn.className = "px-2 py-1 rounded transition text-gray-500 hover:text-gray-900";
+                    btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
                 }
             });
             localStorage.setItem('preferred-lang', lang);

@@ -49,25 +49,25 @@
         </div>
     </nav>
 
-    <!-- SEÇÃO 1: HERO (Visual Corrigido: Sem Crops e Texto Expandido) -->
+    <!-- SEÇÃO 1: HERO (Visual Corrigido: Proporção Widescreen 16:9) -->
     <header class="w-full bg-white border-b border-gray-100 pb-4">
-        <!-- Adicionamos gap-4 para separar as fotos e p-4 para não colarem na borda da tela -->
+        <!-- Mantém o alinhamento perfeito, mas agora em formato widescreen -->
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4">
             
-            <!-- Lado Esquerdo: Aurora (aspect-[4/3] preserva a largura da foto de paisagem) -->
-            <div class="relative overflow-hidden rounded-xl aspect-[4/3] group shadow-sm">
+            <!-- Lado Esquerdo: Aurora (Mudado para 16:9 para abrir as laterais da paisagem) -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-sm">
                 <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
                 <div class="absolute inset-0 bg-black/5"></div>
             </div>
             
-            <!-- Lado Direito: Interior Comercial (aspect-[4/3] mostra muito mais a amplitude da sala) -->
-            <div class="relative overflow-hidden rounded-xl aspect-[4/3] group shadow-sm">
+            <!-- Lado Direito: Interior Comercial (Mudado para 16:9 para valorizar a amplitude do ambiente) -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-sm">
                 <img src="images/hero_interior.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
                 <div class="absolute inset-0 bg-black/5"></div>
             </div>
         </div>
         
-        <!-- Texto de Impacto - Expandido de max-w-3xl para max-w-5xl para caber tudo na mesma linha -->
+        <!-- Texto de Impacto Alinhado -->
         <div class="max-w-5xl mx-auto text-center py-10 px-4">
             <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight mb-4">
                 Capturing the light and atmosphere of the North.
@@ -76,7 +76,6 @@
                 From the vastness of the Arctic sky to the comfort of your home.
             </p>
         </div>
-    </header>
 
     <main class="max-w-6xl mx-auto px-4 py-16 w-full flex-grow">
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12">

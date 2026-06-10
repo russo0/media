@@ -28,9 +28,10 @@
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             
-            <!-- Logo + Nome -->
+            <!-- Logo + Nome (Corrigido para ficar redondo) -->
             <a href="https://borealone.com" class="flex items-center space-x-3 group">
-                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 object-contain filter drop-shadow-sm">
+                <!-- Adicionamos rounded-full e object-cover para cortar o fundo branco em um círculo perfeito -->
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
                 <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
             

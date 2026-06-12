@@ -62,14 +62,23 @@
             Uma jornada visual pelas quatro estações da região fena-escandinava. Da dança mística da Aurora Boreal no inverno à vida selvagem sob o Sol da Meia-Noite no verão.
         </p>
     </header>
-
-   <!-- GRADE DE FOTOS DO PORTFÓLIO (Estilo Pinterest - Mantém seus textos e aceita fotos verticais) -->
+<!-- SEÇÃO DE PANORAMA EM DESTAQUE (Cruza as 3 colunas, fora do grid) -->
+    <div class="max-w-6xl mx-auto px-4 mb-6">
+        <!-- O aspect-[3/1] ou aspect-[21/9] garante o formato de super tela de cinema -->
+        <div class="relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer aspect-[3/1]" onclick="openLightbox(this)">
+            <img src="images/aurora_panorama.jpg" alt="Epic Panoramic View of the Arctic Horizon" class="w-full h-full object-cover transform group-hover:scale-101 transition duration-500">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Swedem</span>
+            </div>
+        </div>
+    </div>
+  <!-- GRADE DE FOTOS DO PORTFÓLIO (Equilibrada para eliminar o buraco esquerdo) -->
     <main class="max-w-6xl mx-auto px-4 pb-24 w-full flex-grow">
         
-        <!-- Substituímos o grid rígido por 'columns' fluido -->
+        <!-- Contêiner Masonry Fluido -->
         <div class="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6 [column-fill:_balance]">
             
-            <!-- FOTO 1 (Sua) -->
+            <!-- FOTO 1 -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/aurora_1.jpg" alt="Aurora Borealis in Överkalix" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -77,7 +86,7 @@
                 </div>
             </div>
 
-            <!-- FOTO 2 (Sua) -->
+            <!-- FOTO 2 -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/aurora_2.jpg" alt="Dancing Lights over Kalix River" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -86,7 +95,6 @@
             </div>
 
             <!-- FOTO NOVA 1: SUA AURORA VERTICAL -->
-            <!-- Importante: certifique-se de que o nome do arquivo na pasta condiz com o 'src' abaixo -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/aurora_5.jpg" alt="Blood Red Aurora" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -94,7 +102,7 @@
                 </div>
             </div>
 
-            <!-- FOTO 3 (Sua) -->
+            <!-- FOTO 3 -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/aurora_3.jpg" alt="My Backyard" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -103,7 +111,6 @@
             </div>
 
             <!-- FOTO NOVA 2: RENA NO SUNSET -->
-            <!-- Ajuste o 'src' com o nome exato do arquivo que você subiu -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/rena_sunset01.jpg" alt="Wild Reindeer during Sunset" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -111,7 +118,7 @@
                 </div>
             </div>
 
-            <!-- FOTO 4 (Sua) -->
+            <!-- FOTO 4 -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/hero_aurora.jpg" alt="Aurora Reflection" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -119,7 +126,7 @@
                 </div>
             </div>
 
-            <!-- FOTO 5 (Sua) -->
+            <!-- FOTO 5 -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/aurora_4.jpg" alt="Aurora Beach" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
@@ -127,11 +134,39 @@
                 </div>
             </div>
 
-            <!-- FOTO 6 (Sua) -->
+            <!-- FOTO 6 -->
             <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
                 <img src="images/aurora_6.jpg" alt="Aurora and Light Pillars" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
                     <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Kautokeino, Norway</span>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- 🚀 NOVOS ESPAÇOS: PREENCHEM O BURACO E COMPLETAM O FEED DA LAPÔNIA -->
+            <!-- ================================================================= -->
+
+            <!-- FOTO 7 (Espaço para o Alce / Vida Selvagem) -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="images/dynjandi_iceland.jpg" alt="Arctic Wildlife" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Dynjandi, Iceland</span>
+                </div>
+            </div>
+
+            <!-- FOTO 8 (Espaço para Paisagem de Gelo / Inverno) -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="images/ice_landscape01.jpg" alt="Winter Ice Formations" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Abisko, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO 9 (Espaço para o Sol da Meia-Noite / Verão) -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="images/summer_lapland.jpg" alt="Midnight Sun over the Lake" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Inari, Finland</span>
                 </div>
             </div>
 

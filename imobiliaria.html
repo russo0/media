@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Photography | Boreal One Media</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+    <link class="apple-touch-icon" href="favicon.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcticDark: '#060a13',
+                        aurora: '#00f5d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- NAV BAR -->
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            
+            <!-- Logo + Nome -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            </a>
+            
+            <div class="flex items-center space-x-4">
+                <a href="index.html" id="nav-back-link" class="text-xs font-medium text-gray-400 hover:text-white transition">
+                    ← Voltar ao Início
+                </a>
+
+                <!-- SELETOR DE IDIOMA -->
+                <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold">
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="max-w-4xl mx-auto text-center pt-16 pb-12 px-4">
+        <span id="page-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">
+            Commercial & Architecture
+        </span>
+        <h1 id="page-title" class="text-3xl md:text-5xl font-light text-white tracking-tight mt-6 mb-4">
+            Fotografia Imobiliária & Comercial
+        </h1>
+        <p id="page-desc" class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+            Imagens de alto impacto que valorizam o design, a iluminação natural e a geometria dos espaços, projetadas para atrair compradores e destacar suas propriedades no mercado.
+        </p>
+    </header>
+
+    <!-- SESSÃO DE PREÇOS / PACOTES -->
+    <main class="max-w-6xl mx-auto px-4 pb-24 w-full flex-grow">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- PLANO 1: ESSENTIAL (Apartamentos / Espaços Pequenos) -->
+            <div class="bg-gray-900/20 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition duration-300">
+                <div>
+                    <h3 id="p1-name" class="text-lg font-bold text-gray-400 uppercase tracking-wider">Essential</h3>
+                    <p id="p1-target" class="text-xs text-gray-500 mb-4">Ideal para apartamentos e estúdios</p>
+                    <div class="mb-6">
+                        <span id="p1-price" class="text-3xl font-extrabold text-white">2.500 kr</span>
+                        <span class="text-xs text-gray-500 font-light"> / moms inkl.</span>
+                    </div>
+                    <hr class="border-gray-800 mb-6">
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p1-f1">15-20 Fotos em Alta Resolução</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p1-f2">Edição Digital (Luz e Geometria)</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p1-f3">Entrega em até 48h úteis</span></li>
+                        <li class="flex items-center text-gray-600"><span>✕</span> <span class="ml-2" id="p1-f4">Imagens de Drone / Aéreas</span></li>
+                        <li class="flex items-center text-gray-600"><span>✕</span> <span class="ml-2" id="p1-f5">Tour Virtual 360°</span></li>
+                    </ul>
+                </div>
+                <a href="mailto:info@borealone.com?subject=Booking:%20Essential%20Package" id="p1-btn" class="mt-8 block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm py-3 rounded-xl transition">
+                    Agendar Ensaio
+                </a>
+            </div>
+
+            <!-- PLANO 2: STANDARD (Villa / Casas de Família) - O MAIS VENDIDO -->
+            <div class="bg-gray-900/40 border-2 border-aurora rounded-2xl p-6 flex flex-col justify-between relative transform md:-translate-y-2 shadow-2xl transition duration-300">
+                <span id="popular-badge" class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-aurora text-gray-950 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">
+                    Mais Popular
+                </span>
+                <div>
+                    <h3 id="p2-name" class="text-lg font-bold text-white uppercase tracking-wider mt-2">Standard Villa</h3>
+                    <p id="p2-target" class="text-xs text-gray-400 mb-4">Ideal para casas residenciais e vilas</p>
+                    <div class="mb-6">
+                        <span id="p2-price" class="text-3xl font-extrabold text-white">4.200 kr</span>
+                        <span class="text-xs text-gray-400 font-light"> / moms inkl.</span>
+                    </div>
+                    <hr class="border-gray-800 mb-6">
+                    <ul class="space-y-3 text-sm text-gray-200">
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p2-f1">30-35 Fotos (Interior & Exterior)</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p2-f2">Edição Avançada Premium HDR</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p2-f3">5-7 Fotos Aéreas com Drone</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p2-f4">Entrega em até 48h úteis</span></li>
+                        <li class="flex items-center text-gray-600"><span>✕</span> <span class="ml-2" id="p2-f5">Tour Virtual 360°</span></li>
+                    </ul>
+                </div>
+                <a href="mailto:info@borealone.com?subject=Booking:%20Standard%20Villa%20Package" id="p2-btn" class="mt-8 block text-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm py-3 rounded-xl transition shadow-md">
+                    Agendar Ensaio
+                </a>
+            </div>
+
+            <!-- PLANO 3: PREMIUM (Casas de Luxo / Comerciais / Airbnb Premium) -->
+            <div class="bg-gray-900/20 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition duration-300">
+                <div>
+                    <h3 id="p3-name" class="text-lg font-bold text-gray-400 uppercase tracking-wider">Premium / Pro</h3>
+                    <p id="p3-target" class="text-xs text-gray-500 mb-4">Para propriedades exclusivas e comerciais</p>
+                    <div class="mb-6">
+                        <span id="p3-price" class="text-3xl font-extrabold text-white">6.900 kr</span>
+                        <span class="text-xs text-gray-500 font-light"> / moms inkl.</span>
+                    </div>
+                    <hr class="border-gray-800 mb-6">
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p3-f1">Cobertura Fotográfica Completa</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p3-f2">Fotos de Drone (Foco na Localização)</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p3-f3">Tour Virtual 360° Interativo Interativo</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p3-f4">Vídeo Teaser de 60s para Redes Sociais</span></li>
+                        <li class="flex items-center"><span class="text-aurora mr-2">✓</span> <span id="p3-f5">Suporte Prioritário para Corretores</span></li>
+                    </ul>
+                </div>
+                <a href="mailto:info@borealone.com?subject=Booking:%20Premium%20Pro%20Package" id="p3-btn" class="mt-8 block text-center bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm py-3 rounded-xl transition">
+                    Solicitar Orçamento
+                </a>
+            </div>
+
+        </div>
+
+        <!-- NOTA SOBRE COMPLEMENTOS -->
+        <div class="mt-12 bg-gray-950/40 border border-gray-900 rounded-xl p-6 text-center max-w-2xl mx-auto">
+            <p id="addon-note" class="text-xs text-gray-400 font-light">
+                💡 <strong>Precisa de algo personalizado?</strong> Atendemos hotéis, grandes galpões comerciais e ensaios sazonais para Airbnb na Lapônia Sueca. Os preços acima são base para a região de Norrbotten. Deslocamentos longos podem incluir taxas adicionais.
+            </p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full py-12 text-center px-4 border-t border-gray-900 bg-black/10">
+        <div class="max-w-3xl mx-auto">
+            <p id="footer-rights" class="text-xs text-gray-600">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE TRADUÇÃO TRILÍNGUE -->
+    <script>
+        const translations = {
+            en: {
+                navBack: "← Back to Home",
+                pageBadge: "Commercial & Architecture",
+                pageTitle: "Real Estate & Commercial Photography",
+                pageDesc: "High-impact imagery emphasizing design, natural light, and spatial geometry, crafted to attract buyers and make your listings stand out.",
+                popularBadge: "Most Popular",
+                p1Name: "Essential", p1Target: "Ideal for apartments and studios",
+                p1F1: "15-20 High-Resolution Photos", p1F2: "Digital Editing (Light & Geometry)", p1F3: "Delivery within 48 business hours", p1F4: "Drone / Aerial Imagery", p1F5: "360° Virtual Tour",
+                p1Btn: "Book Session",
+                p2Name: "Standard Villa", p2Target: "Ideal for residential homes and villas",
+                p2F1: "30-35 Photos (Interior & Exterior)", p2F2: "Advanced Premium HDR Editing", p2F3: "5-7 Aerial Drone Photos", p2F4: "Delivery within 48 business hours", p2F5: "360° Virtual Tour",
+                p2Btn: "Book Session",
+                p3Name: "Premium / Pro", p3Target: "For exclusive and commercial properties",
+                p3F1: "Full Property Photographic Coverage", p3F2: "Drone Photos (Location Focused)", p3F3: "Interactive 360° Virtual Tour", p3F4: "60s Video Teaser for Social Media", p3F5: "Priority Support for Agents",
+                p3Btn: "Request Quote",
+                addonNote: "💡 <strong>Need something custom?</strong> We cater to hotels, large commercial spaces, and seasonal Airbnb photography across Swedish Lapland. Prices above cover the Norrbotten region; long-distance travel fees may apply.",
+                footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+            },
+            sv: {
+                navBack: "← Tillbaka till Hem",
+                pageBadge: "Kommersiellt & Arkitektur",
+                pageTitle: "Fastighets- & Kommersiell Fotografering",
+                pageDesc: "Bilder med hög inverkan som framhäver design, naturligt ljus och rymdgeometri, skapade för att locka köpare och få dina objekt att sticka ut.",
+                popularBadge: "Mest Populär",
+                p1Name: "Essential", p1Target: "Perfekt för lägenheter och studios",
+                p1F1: "15-20 Högupplösta Bilder", p1F2: "Digital Redigering (Ljus & Geometri)", p1F3: "Leverans inom 48 helgfria timmar", p1F4: "Drönar- / Flygbilder", p1F5: "360° Virtuell Visning",
+                p1Btn: "Boka Fotografering",
+                p2Name: "Standard Villa", p2Target: "Perfekt för villor och familjehem",
+                p2F1: "30-35 Bilder (Interiör & Exteriör)", p2F2: "Avancerad Premium HDR-redigering", p2F3: "5-7 Drönarbilder från luften", p2F4: "Leverans inom 48 helgfria timmar", p2F5: "360° Virtuell Visning",
+                p2Btn: "Boka Fotografering",
+                p3Name: "Premium / Pro", p3Target: "För exklusiva och kommersiella fastigheter",
+                p3F1: "Komplett Fotografering av Fastigheten", p3F2: "Drönarbilder (Fokus på läge)", p3F3: "Interaktiv 360° Virtuell Visning", p3F4: "60s Videosnutt för Sociala Medier", p3F5: "Prioriterad Support för Mäklare",
+                p3Btn: "Begär Offert",
+                addonNote: "💡 <strong>Behöver du något skräddarsytt?</strong> Vi fotograferar hotell, stora kommersiella lokaler och säsongsbetonade Airbnb-boenden i hela Svenska Lappland. Priserna ovan gäller för Norrbotten; resekostnader kan tillkomma vid längre avstånd.",
+                footerRights: "© 2026 Boreal One AB. Med ensamrätt."
+            },
+            pt: {
+                navBack: "← Voltar ao Início",
+                pageBadge: "Comercial & Arquitetura",
+                pageTitle: "Fotografia Imobiliária & Comercial",
+                pageDesc: "Imagens de alto impacto que valorizam o design, a iluminação natural e a geometria dos espaços, projetadas para atrair compradores e destacar suas propriedades no mercado.",
+                popularBadge: "Mais Popular",
+                p1Name: "Essential", p1Target: "Ideal para apartamentos e estúdios",
+                p1F1: "15-20 Fotos em Alta Resolução", p1F2: "Edição Digital (Luz e Geometria)", p1F3: "Entrega em até 48h úteis", p1F4: "Imagens de Drone / Aéreas", p1F5: "Tour Virtual 360°",
+                p1Btn: "Agendar Ensaio",
+                p2Name: "Standard Villa", p2Target: "Ideal para casas residenciais e vilas",
+                p2F1: "30-35 Fotos (Interior & Exterior)", p2F2: "Edição Avançada Premium HDR", p2F3: "5-7 Fotos Aéreas com Drone", p2F4: "Entrega em até 48h úteis", p2F5: "Tour Virtual 360°",
+                p2Btn: "Agendar Ensaio",
+                p3Name: "Premium / Pro", p3Target: "Para propriedades exclusivas e comerciais",
+                p3F1: "Cobertura Fotográfica Completa", p3F2: "Fotos de Drone (Foco na Localização)", p3F3: "Tour Virtual 360° Interativo", p3F4: "Vídeo Teaser de 60s para Redes Sociais", p3F5: "Suporte Prioritário para Corretores",
+                p3Btn: "Solicitar Orçamento",
+                addonNote: "💡 <strong>Precisa de algo personalizado?</strong> Atendemos hotéis, grandes galpões comerciais e ensaios sazonais para Airbnb na Lapônia Sueca. Os preços acima são base para a região de Norrbotten. Deslocamentos longos podem incluir taxas adicionais.",
+                footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('nav-back-link').textContent = translations[lang].navBack;
+            document.getElementById('page-badge').textContent = translations[lang].pageBadge;
+            document.getElementById('page-title').textContent = translations[lang].pageTitle;
+            document.getElementById('page-desc').textContent = translations[lang].pageDesc;
+            document.getElementById('popular-badge').textContent = translations[lang].popularBadge;
+            document.getElementById('p1-name').textContent = translations[lang].p1Name;
+            document.getElementById('p1-target').textContent = translations[lang].p1Target;
+            document.getElementById('p1-f1').textContent = translations[lang].p1F1;
+            document.getElementById('p1-f2').textContent = translations[lang].p1F2;
+            document.getElementById('p1-f3').textContent = translations[lang].p1F3;
+            document.getElementById('p1-f4').textContent = translations[lang].p1F4;
+            document.getElementById('p1-f5').textContent = translations[lang].p1F5;
+            document.getElementById('p1-btn').textContent = translations[lang].p1Btn;
+            document.getElementById('p2-name').textContent = translations[lang].p2Name;
+            document.getElementById('p2-target').textContent = translations[lang].p2Target;
+            document.getElementById('p2-f1').textContent = translations[lang].p2F1;
+            document.getElementById('p2-f2').textContent = translations[lang].p2F2;
+            document.getElementById('p2-f3').textContent = translations[lang].p2F3;
+            document.getElementById('p2-f4').textContent = translations[lang].p2F4;
+            document.getElementById('p2-f5').textContent = translations[lang].p2F5;
+            document.getElementById('p2-btn').textContent = translations[lang].p2Btn;
+            document.getElementById('p3-name').textContent = translations[lang].p3Name;
+            document.getElementById('p3-target').textContent = translations[lang].p3Target;
+            document.getElementById('p3-f1').textContent = translations[lang].p3F1;
+            document.getElementById('p3-f2').textContent = translations[lang].p3F2;
+            document.getElementById('p3-f3').textContent = translations[lang].p3F3;
+            document.getElementById('p3-f4').textContent = translations[lang].p3F4;
+            document.getElementById('p3-f5').textContent = translations[lang].p3F5;
+            document.getElementById('p3-btn').textContent = translations[lang].p3Btn;
+            document.getElementById('addon-note').innerHTML = translations[lang].addonNote;
+            document.getElementById('footer-rights').textContent = translations[lang].footerRights;
+
+            ['en', 'sv', 'pt'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (l === lang) {
+                    btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
+                } else {
+                    btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
+                }
+            });
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-lang');
+            if (savedLang && translations[savedLang]) {
+                setLanguage(savedLang);
+            } else {
+                const browserLang = navigator.language.substring(0, 2);
+                if (translations[browserLang]) {
+                    setLanguage(browserLang);
+                } else {
+                    setLanguage('en');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <!-- SEÇÃO 2: TILLVAL (ADD-ONS ATUALIZADOS COM 360 DIVIDIDO) -->
+        <!-- SEÇÃO 2: TILLVAL (ADD-ONS) -->
         <div class="mb-12">
             <h2 id="sec2-title" class="text-lg font-bold text-white uppercase tracking-wider mb-6 border-l-2 border-aurora pl-3">2. Lägg till Tillval (Add-ons)</h2>
             <div class="bg-gray-900/10 border border-gray-800 rounded-xl divide-y divide-gray-800">
@@ -137,17 +137,32 @@
                     </div>
                 </div>
 
-                <!-- NOVO TILLVAL: FOTOS 36° AVULSAS (Fácil de entregar) -->
+                <!-- 360° BASIC (NOVO) -->
                 <div class="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div class="flex items-start space-x-3">
                         <span class="text-aurora text-xl mt-0.5">➔</span>
                         <div>
-                            <h3 id="photo360-title" class="font-bold text-white">360° Panoramafoton (Enbart bilder)</h3>
-                            <p id="photo360-desc" class="text-sm text-gray-400">Högupplösta 360-graders sfäriska bilder som levereras som råfiler. Perfekt för direkt uppladdning på plattformar som stöder 360°-visning (t.ex. Facebook).</p>
+                            <h3 id="360basic-title" class="font-bold text-white">360° Panorama Basic (5 bilder)</h3>
+                            <p id="360basic-desc" class="text-sm text-gray-400">5 högupplösta 360-graders sfäriska bilder. Levereras som råfiler eller tillgängliga via smidiga Kuula-länkar för enkel interaktiv visning.</p>
                         </div>
                     </div>
                     <div class="text-right min-w-[120px]">
-                        <span id="photo360-price" class="text-xl font-bold text-white">+650 kr</span>
+                        <span id="360basic-price" class="text-xl font-bold text-white">+650 kr</span>
+                        <p class="text-[10px] text-gray-500">exkl. moms</p>
+                    </div>
+                </div>
+
+                <!-- 360° PREMIUM (NOVO) -->
+                <div class="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-aurora text-xl mt-0.5">➔</span>
+                        <div>
+                            <h3 id="360premium-title" class="font-bold text-white">360° Panorama Premium (10 bilder)</h3>
+                            <p id="360premium-desc" class="text-sm text-gray-400">10 högupplösta 360-graders sfäriska bilder. Rekommenderas för större villor för komplett täckning av alla rum. Levereras som råfiler eller via Kuula-länkar.</p>
+                        </div>
+                    </div>
+                    <div class="text-right min-w-[120px]">
+                        <span id="360premium-price" class="text-xl font-bold text-white">+1 150 kr</span>
                         <p class="text-[10px] text-gray-500">exkl. moms</p>
                     </div>
                 </div>
@@ -158,11 +173,10 @@
                         <span class="text-aurora text-xl mt-0.5">➔</span>
                         <div>
                             <h3 id="tour-title" class="font-bold text-gray-400">360° Virtuell Visning (Komplett Tour)</h3>
-                            <p id="tour-desc" class="text-sm text-gray-500">En helt interaktiv digital rundvandring där alla rum länkas samman sömlöst. Kontakta oss för prissättning baserat på fastighetens storlek.</p>
+                            <p id="tour-desc" class="text-sm text-gray-500">En helt sammankopplad, interaktiv digital rundvandring av fastigheten. Kontakta oss för prissättning baserat på uppdragets omfattning.</p>
                         </div>
                     </div>
                     <div class="text-right min-w-[160px]">
-                        <!-- Alterado dinamicamente para Ask for a quote / Offert -->
                         <span id="tour-price" class="text-sm font-bold text-amber-500 uppercase tracking-wider bg-amber-950/30 px-3 py-1 rounded border border-amber-900/40">Offert på begäran</span>
                     </div>
                 </div>
@@ -185,7 +199,7 @@
             <div class="bg-gray-950/40 p-5 rounded-xl border border-gray-900">
                 <h4 id="cond2-title" class="font-bold text-white mb-2 text-sm uppercase tracking-wide text-aurora">Förberedelse & Styling</h4>
                 <p id="cond2-desc" class="text-xs text-gray-400 leading-relaxed">
-                    Fastigheten ska vara städad vid bokad tid. Om extra tidsåtgång krävs på plats för plock/styling tillkommer en timavgift på <strong>450 kr</strong> per påbörjad halvtimme.
+                    Fastigheten ska vara städad vid bokad tid. Om extra tidsåtgång krävs på plats for plock/styling tillkommer en timavgift på <strong>450 kr</strong> per påbörjad halvtimme.
                 </p>
             </div>
 
@@ -236,12 +250,18 @@
                 drone1Desc: "5–6 aerial drone photos. Provides an excellent birds-eye overview of the house and its immediate yard.",
                 drone2Title: "Drone Premium",
                 drone2Desc: "10–12 aerial drone photos. Recommended for large grounds (>1 ha), forestry properties, or waterfront locations.",
-                photo360Title: "360° Panorama Photos (Images Only)",
-                photo360Desc: "High-resolution 360-degree spherical images delivered as raw files. Perfect for direct upload to platforms that natively support 360° viewing (e.g., Facebook).",
-                photo360Price: "+650 kr",
-                tourTitle: "360° Virtual Tour (Full Interactive)",
-                tourDesc: "A fully interactive digital walkthrough linking all rooms seamlessly. Contact us for custom pricing based on property size.",
+                
+                // Módulos 360 e Tour traduzidos para EN
+                title360Basic: "360° Panorama Basic (5 photos)",
+                desc360Basic: "5 high-resolution 360-degree spherical images. Delivered as raw files or accessible via convenient Kuula links for easy interactive viewing.",
+                price360Basic: "+650 kr",
+                title360Premium: "360° Panorama Premium (10 photos)",
+                desc360Premium: "10 high-resolution 360-degree spherical images. Recommended for larger villas to ensure full room coverage. Delivered as raw files or via Kuula links.",
+                price360Premium: "+1,150 kr",
+                tourTitle: "360° Virtual Tour (Full Interactive Tour)",
+                tourDesc: "A fully linked, interactive digital walkthrough of the estate. Contact us for custom pricing based on the scope of the project.",
                 tourPrice: "Ask for a quote",
+                
                 cond1Title: "Travel Expenses",
                 cond1Desc: "Mileage compensation outside the local area (>15 km from base) is charged at <strong>5.50 kr / km</strong> (round trip).",
                 cond2Title: "Preparation & Styling",
@@ -269,12 +289,18 @@
                 drone1Desc: "5–6 drönarbilder från luften. Ger ett fint översiktsperspektiv på huset och trädgården.",
                 drone2Title: "Drone Premium",
                 drone2Desc: "10–12 drönarbilder. Rekommenderas för stora tomter (>1 ha), skogsfastigheter eller strandlägen.",
-                photo360Title: "360° Panoramafoton (Enbart bilder)",
-                photo360Desc: "Högupplösta 360-graders sfäriska bilder som levereras som råfiler. Perfekt för direkt uppladdning på plattformar som stöder 360°-visning (t.ex. Facebook).",
-                photo360Price: "+650 kr",
+                
+                // Módulos 360 e Tour traduzidos para SV
+                title360Basic: "360° Panorama Basic (5 bilder)",
+                desc360Basic: "5 högupplösta 360-graders sfäriska bilder. Levereras som råfiler eller tillgängliga via smidiga Kuula-länkar för enkel interaktiv visning.",
+                price360Basic: "+650 kr",
+                title360Premium: "360° Panorama Premium (10 bilder)",
+                desc360Premium: "10 högupplösta 360-graders sfäriska bilder. Rekommenderas för större villor för komplett täckning av alla rum. Levereras som råfiler eller via Kuula-länkar.",
+                price360Premium: "+1 150 kr",
                 tourTitle: "360° Virtuell Visning (Komplett Tour)",
-                tourDesc: "En helt interaktiv digital rundvandring där alla rum länkas samman sömlöst. Kontakta oss för prissättning baserat på fastighetens storlek.",
+                tourDesc: "En helt sammankopplad, interaktiv digital rundvandring av fastigheten. Kontakta oss för prissättning baserat på uppdragets omfattning.",
                 tourPrice: "Offert på begäran",
+                
                 cond1Title: "Reseersättning",
                 cond1Desc: "Milersättning och restid utanför närområdet (>15 km från utgångspunkt) debiteras med <strong>5,50 kr / km</strong> (tur och retur).",
                 cond2Title: "Förberedelse & Styling",
@@ -302,12 +328,18 @@
                 drone1Desc: "5–6 fotos aéreas com drone. Proporciona uma excelente visão panorâmica da casa e do jardim ao redor.",
                 drone2Title: "Drone Premium",
                 drone2Desc: "10–12 fotos aéreas com drone. Recomendado para terrenos grandes (>1 ha), propriedades florestais ou imóveis na margem de rios/lagos.",
-                photo360Title: "Fotos Panorâmicas 360° (Apenas Imagens)",
-                photo360Desc: "Imagens esféricas em 360 graus de alta resolução entregues como arquivos brutos. Perfeito para postar direto em plataformas que já suportam visualização 360° nativa (como o Facebook).",
-                photo360Price: "+650 kr",
-                tourTitle: "Tour Virtual 360° (Completo Interativo)",
-                tourDesc: "Uma caminhada digital totalmente interativa ligando todos os cômodos de forma integrada. Entre em contato para um orçamento baseado no tamanho do imóvel.",
+                
+                // Módulos 360 e Tour traduzidos para PT
+                title360Basic: "360° Panorama Basic (5 fotos)",
+                desc360Basic: "5 imagens esféricas em 360° de alta resolução. Entregues como arquivos brutos ou via links práticos do Kuula para visualização interativa fácil.",
+                price360Basic: "+650 kr",
+                title360Premium: "360° Panorama Premium (10 fotos)",
+                desc360Premium: "10 imagens esféricas em 360° de alta resolução. Recomendado para vilas maiores para garantir a cobertura de todos os cômodos. Entregues como arquivos brutos ou via links do Kuula.",
+                price360Premium: "+1.150 kr",
+                tourTitle: "Tour Virtual 360° (Tour Completo Interativo)",
+                tourDesc: "Uma caminhada digital totalmente interativa interligando todos os cômodos de forma integrada. Entre em contato para um orçamento baseado no tamanho do projeto.",
                 tourPrice: "Orçamento sob consulta",
+                
                 cond1Title: "Custos de Deslocamento",
                 cond1Desc: "Reembolso de quilometragem fora da área local (>15 km da base) é cobrado a <strong>5,50 kr / km</strong> (ida e volta).",
                 cond2Title: "Preparação & Cenografia",
@@ -338,10 +370,14 @@
             document.getElementById('drone2-title').textContent = translations[lang].drone2Title;
             document.getElementById('drone2-desc').textContent = translations[lang].drone2Desc;
             
-            // Novos IDs mapeados na tradução
-            document.getElementById('photo360-title').textContent = translations[lang].photo360Title;
-            document.getElementById('photo360-desc').textContent = translations[lang].photo360Desc;
-            document.getElementById('photo360-price').textContent = translations[lang].photo360Price;
+            // Novos IDs injetados na tradução dinâmica
+            document.getElementById('360basic-title').textContent = translations[lang].title360Basic;
+            document.getElementById('360basic-desc').textContent = translations[lang].desc360Basic;
+            document.getElementById('360basic-price').textContent = translations[lang].price360Basic;
+
+            document.getElementById('360premium-title').textContent = translations[lang].title360Premium;
+            document.getElementById('360premium-desc').textContent = translations[lang].desc360Premium;
+            document.getElementById('360premium-price').textContent = translations[lang].price360Premium;
 
             document.getElementById('tour-title').textContent = translations[lang].tourTitle;
             document.getElementById('tour-desc').textContent = translations[lang].tourDesc;

@@ -49,7 +49,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION (Selo Corrigido para ser Independente) -->
+    <!-- HERO SECTION -->
     <header class="max-w-4xl mx-auto text-center pt-16 pb-12 px-4">
         <span id="page-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">
             Professional Real Estate Media
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <!-- SEÇÃO 2: TILLVAL (ADD-ONS CORRIGIDOS COM E-MAIL PHOTOS@) -->
+        <!-- SEÇÃO 2: TILLVAL (ADD-ONS ATUALIZADOS COM 360 DIVIDIDO) -->
         <div class="mb-12">
             <h2 id="sec2-title" class="text-lg font-bold text-white uppercase tracking-wider mb-6 border-l-2 border-aurora pl-3">2. Lägg till Tillval (Add-ons)</h2>
             <div class="bg-gray-900/10 border border-gray-800 rounded-xl divide-y divide-gray-800">
@@ -137,20 +137,33 @@
                     </div>
                 </div>
 
-                <!-- TOUR VIRTUAL 360 -->
+                <!-- NOVO TILLVAL: FOTOS 36° AVULSAS (Fácil de entregar) -->
                 <div class="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div class="flex items-start space-x-3">
                         <span class="text-aurora text-xl mt-0.5">➔</span>
                         <div>
-                            <div class="flex items-center space-x-2">
-                                <h3 id="tour-title" class="font-bold text-gray-400">360° Virtuell Visning (Kuula)</h3>
-                                <span id="tour-tag" class="border border-gray-700 text-gray-500 text-[8px] px-1.5 py-0.5 rounded uppercase tracking-wider">På begäran</span>
-                            </div>
-                            <p id="tour-desc" class="text-sm text-gray-500">Interaktiv digital rundvandring i fastigheten. Kontakta oss för prissättning och upplägg.</p>
+                            <h3 id="photo360-title" class="font-bold text-white">360° Panoramafoton (Enbart bilder)</h3>
+                            <p id="photo360-desc" class="text-sm text-gray-400">Högupplösta 360-graders sfäriska bilder som levereras som råfiler. Perfekt för direkt uppladdning på plattformar som stöder 360°-visning (t.ex. Facebook).</p>
                         </div>
                     </div>
                     <div class="text-right min-w-[120px]">
-                        <span id="tour-price" class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Offert</span>
+                        <span id="photo360-price" class="text-xl font-bold text-white">+650 kr</span>
+                        <p class="text-[10px] text-gray-500">exkl. moms</p>
+                    </div>
+                </div>
+
+                <!-- TOUR VIRTUAL COMPLETO: ASK FOR A QUOTE -->
+                <div class="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-aurora text-xl mt-0.5">➔</span>
+                        <div>
+                            <h3 id="tour-title" class="font-bold text-gray-400">360° Virtuell Visning (Komplett Tour)</h3>
+                            <p id="tour-desc" class="text-sm text-gray-500">En helt interaktiv digital rundvandring där alla rum länkas samman sömlöst. Kontakta oss för prissättning baserat på fastighetens storlek.</p>
+                        </div>
+                    </div>
+                    <div class="text-right min-w-[160px]">
+                        <!-- Alterado dinamicamente para Ask for a quote / Offert -->
+                        <span id="tour-price" class="text-sm font-bold text-amber-500 uppercase tracking-wider bg-amber-950/30 px-3 py-1 rounded border border-amber-900/40">Offert på begäran</span>
                     </div>
                 </div>
 
@@ -186,7 +199,7 @@
 
         </div>
 
-        <!-- BOTÃO DE CONTATO ATUALIZADO PARA PHOTOS@ -->
+        <!-- BOTÃO DE CONTATO -->
         <div class="mt-16 text-center">
             <a href="mailto:photos@borealone.com?subject=Bokning%20av%20Fastighetsfotografering" id="cta-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-8 py-4 rounded-xl hover:bg-gray-200 transition shadow-lg">
                 Boka eller Begär Offert
@@ -202,7 +215,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE TRADUÇÃO TRILÍNGUE CORRIGIDO -->
+    <!-- SCRIPT DE TRADUÇÃO TRILÍNGUE ATUALIZADO -->
     <script>
         const translations = {
             en: {
@@ -223,10 +236,12 @@
                 drone1Desc: "5–6 aerial drone photos. Provides an excellent birds-eye overview of the house and its immediate yard.",
                 drone2Title: "Drone Premium",
                 drone2Desc: "10–12 aerial drone photos. Recommended for large grounds (>1 ha), forestry properties, or waterfront locations.",
-                tourTitle: "360° Virtual Tour (Kuula)",
-                tourTag: "On Request",
-                tourDesc: "Interactive digital walkthrough of the estate. Contact us for customized setup and custom pricing structure.",
-                tourPrice: "Quote",
+                photo360Title: "360° Panorama Photos (Images Only)",
+                photo360Desc: "High-resolution 360-degree spherical images delivered as raw files. Perfect for direct upload to platforms that natively support 360° viewing (e.g., Facebook).",
+                photo360Price: "+650 kr",
+                tourTitle: "360° Virtual Tour (Full Interactive)",
+                tourDesc: "A fully interactive digital walkthrough linking all rooms seamlessly. Contact us for custom pricing based on property size.",
+                tourPrice: "Ask for a quote",
                 cond1Title: "Travel Expenses",
                 cond1Desc: "Mileage compensation outside the local area (>15 km from base) is charged at <strong>5.50 kr / km</strong> (round trip).",
                 cond2Title: "Preparation & Styling",
@@ -254,10 +269,12 @@
                 drone1Desc: "5–6 drönarbilder från luften. Ger ett fint översiktsperspektiv på huset och trädgården.",
                 drone2Title: "Drone Premium",
                 drone2Desc: "10–12 drönarbilder. Rekommenderas för stora tomter (>1 ha), skogsfastigheter eller strandlägen.",
-                tourTitle: "360° Virtuell Visning (Kuula)",
-                tourTag: "På begäran",
-                tourDesc: "Interaktiv digital rundvandring i fastigheten. Kontakta oss för prissättning och upplägg.",
-                tourPrice: "Offert",
+                photo360Title: "360° Panoramafoton (Enbart bilder)",
+                photo360Desc: "Högupplösta 360-graders sfäriska bilder som levereras som råfiler. Perfekt för direkt uppladdning på plattformar som stöder 360°-visning (t.ex. Facebook).",
+                photo360Price: "+650 kr",
+                tourTitle: "360° Virtuell Visning (Komplett Tour)",
+                tourDesc: "En helt interaktiv digital rundvandring där alla rum länkas samman sömlöst. Kontakta oss för prissättning baserat på fastighetens storlek.",
+                tourPrice: "Offert på begäran",
                 cond1Title: "Reseersättning",
                 cond1Desc: "Milersättning och restid utanför närområdet (>15 km från utgångspunkt) debiteras med <strong>5,50 kr / km</strong> (tur och retur).",
                 cond2Title: "Förberedelse & Styling",
@@ -285,10 +302,12 @@
                 drone1Desc: "5–6 fotos aéreas com drone. Proporciona uma excelente visão panorâmica da casa e do jardim ao redor.",
                 drone2Title: "Drone Premium",
                 drone2Desc: "10–12 fotos aéreas com drone. Recomendado para terrenos grandes (>1 ha), propriedades florestais ou imóveis na margem de rios/lagos.",
-                tourTitle: "Tour Virtual 360° (Kuula)",
-                tourTag: "Sob Consulta",
-                tourDesc: "Caminhada digital interativa pelo imóvel. Entre em contato para configurações personalizadas e orçamentos.",
-                tourPrice: "Orçamento",
+                photo360Title: "Fotos Panorâmicas 360° (Apenas Imagens)",
+                photo360Desc: "Imagens esféricas em 360 graus de alta resolução entregues como arquivos brutos. Perfeito para postar direto em plataformas que já suportam visualização 360° nativa (como o Facebook).",
+                photo360Price: "+650 kr",
+                tourTitle: "Tour Virtual 360° (Completo Interativo)",
+                tourDesc: "Uma caminhada digital totalmente interativa ligando todos os cômodos de forma integrada. Entre em contato para um orçamento baseado no tamanho do imóvel.",
+                tourPrice: "Orçamento sob consulta",
                 cond1Title: "Custos de Deslocamento",
                 cond1Desc: "Reembolso de quilometragem fora da área local (>15 km da base) é cobrado a <strong>5,50 kr / km</strong> (ida e volta).",
                 cond2Title: "Preparação & Cenografia",
@@ -318,10 +337,16 @@
             document.getElementById('drone1-desc').textContent = translations[lang].drone1Desc;
             document.getElementById('drone2-title').textContent = translations[lang].drone2Title;
             document.getElementById('drone2-desc').textContent = translations[lang].drone2Desc;
+            
+            // Novos IDs mapeados na tradução
+            document.getElementById('photo360-title').textContent = translations[lang].photo360Title;
+            document.getElementById('photo360-desc').textContent = translations[lang].photo360Desc;
+            document.getElementById('photo360-price').textContent = translations[lang].photo360Price;
+
             document.getElementById('tour-title').textContent = translations[lang].tourTitle;
-            document.getElementById('tour-tag').textContent = translations[lang].tourTag;
             document.getElementById('tour-desc').textContent = translations[lang].tourDesc;
             document.getElementById('tour-price').textContent = translations[lang].tourPrice;
+            
             document.getElementById('cond1-title').textContent = translations[lang].cond1Title;
             document.getElementById('cond1-desc').innerHTML = translations[lang].cond1Desc;
             document.getElementById('cond2-title').textContent = translations[lang].cond2Title;

@@ -24,24 +24,33 @@
 </head>
 <body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- NAV BAR -->
+ <!-- NAV BAR CORRIGIDA PARA GALERIA.HTML E IMOBILIARIA.HTML (Acaba com o botao voltar espremido) -->
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3 group">
+        <!-- O flex-wrap permite que os elementos quebrem de linha no celular em vez de espremer -->
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+            
+            <!-- LADO ESQUERDO: Logo + Nome (Ajustado o tamanho da fonte para não quebrar no mobile) -->
+            <a href="index.html" class="flex items-center space-x-3 group order-1">
                 <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
-            <div class="flex items-center space-x-4">
-                <a href="index.html" id="nav-back-link" class="text-xs font-medium text-gray-400 hover:text-white transition">← Voltar ao Início</a>
-                <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold">
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
-                </div>
+            
+            <!-- LADO DIREITO: Idiomas (Mantém o alinhamento no topo junto com o logo) -->
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
             </div>
+
+            <!-- BAIXO: O botão de voltar (w-full joga ele para uma linha exclusiva abaixo no celular) -->
+            <div class="w-full sm:w-auto flex items-center justify-center sm:justify-start text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="index.html" id="nav-back-link" class="text-gray-400 hover:text-white py-1 transition tracking-wide uppercase sm:normal-case">
+                    ← Voltar ao Início
+                </a>
+            </div>
+
         </div>
     </nav>
-
     <!-- INTRO/HERO SECTION -->
     <header class="max-w-4xl mx-auto text-center pt-16 pb-8 px-4">
         <span id="page-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">Commercial & Architecture</span>

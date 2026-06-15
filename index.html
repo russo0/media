@@ -24,38 +24,37 @@
 </head>
 <body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- NAV BAR (Estilo Cinema / Minimalista Escuro) -->
+    <!-- NAV BAR CORRIGIDA (Totalmente Responsiva no Mobile) -->
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <!-- Ativamos flex-wrap e min-h-16 para permitir expansão vertical segura no celular -->
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
             
-            <!-- Logo + Nome (Corrigido para ficar redondo) -->
-            <a href="https://borealone.com" class="flex items-center space-x-3 group">
-                <!-- Adicionamos rounded-full e object-cover para cortar o fundo branco em um círculo perfeito -->
-                <img src="boreal_one_logo_noname.jpg" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            <!-- LADO ESQUERDO: Logo + Nome (order-1) -->
+            <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-sm sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
             
-            <div class="flex items-center space-x-4">
-                <!-- Links de Roteamento -->
-                <div class="hidden sm:flex items-center space-x-2 text-xs font-medium">
-                    <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white px-3 py-1.5 transition">
-                        ← Voltar ao Início
-                    </a>
-                    <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-900/50 hover:bg-gray-900 text-gray-300 px-3 py-1.5 rounded border border-gray-800 transition">
-                        Cybersecurity & IT →
-                    </a>
-                </div>
-
-                <!-- SELETOR DE IDIOMA -->
-                <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold">
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
-                </div>
+            <!-- LADO DIREITO: Seletor de Idioma (order-2 no mobile, order-3 no PC) -->
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
             </div>
+
+            <!-- CENTRO/BAIXO: Links de Roteamento (Ocupa largura total no mobile e quebra para baixo) -->
+            <!-- Mudamos de hidden para w-full (mobile) e sm:w-auto (desktop) -->
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-2 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white sm:px-3 py-1.5 transition">
+                    ← Voltar ao Início
+                </a>
+                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-900/50 hover:bg-gray-900 text-gray-300 px-3 py-1.5 rounded border border-gray-800 transition">
+                    Cybersecurity & IT →
+                </a>
+            </div>
+
         </div>
     </nav>
-
     <!-- SEÇÃO 1: HERO (Widescreen Sem Bordas Brancas) -->
     <header class="w-full bg-[#070b14]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lapland Collection | Boreal One Media</title>
+    <title>Boreal One Media | Photography</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
     <link class="apple-touch-icon" href="favicon.png">
@@ -24,196 +24,254 @@
 </head>
 <body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- NAV BAR INTERNA CORRIGIDA (Mobile e Tradução Alinhados) -->
+    <!-- NAV BAR (Estilo Cinema / Minimalista Escuro) -->
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             
-            <a href="../index.html" class="flex items-center space-x-3 group order-1">
-                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            <!-- Logo + Nome (Corrigido para ficar redondo) -->
+            <a href="https://borealone.com" class="flex items-center space-x-3 group">
+                <!-- Adicionamos rounded-full e object-cover para cortar o fundo branco em um círculo perfeito -->
+                <img src="boreal_one_logo_noname.jpg" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
             
-            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
-                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
-            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Links de Roteamento -->
+                <div class="hidden sm:flex items-center space-x-2 text-xs font-medium">
+                    <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white px-3 py-1.5 transition">
+                        ← Voltar ao Início
+                    </a>
+                    <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-900/50 hover:bg-gray-900 text-gray-300 px-3 py-1.5 rounded border border-gray-800 transition">
+                        Cybersecurity & IT →
+                    </a>
+                </div>
 
-            <div class="w-full sm:w-auto flex items-center justify-center sm:justify-start text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
-                <a href="../index.html" id="nav-back-link" class="text-gray-400 hover:text-white py-1 transition tracking-wide uppercase sm:normal-case">
-                    ← Voltar ao Início
-                </a>
+                <!-- SELETOR DE IDIOMA -->
+                <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold">
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
+                </div>
             </div>
-
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="max-w-4xl mx-auto text-center pt-16 pb-12 px-4">
-        <span id="page-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-4 py-1 rounded-full border border-aurora/20">
-            THE LAPLAND COLLECTION
-        </span>
-        <h1 id="page-title" class="text-4xl md:text-6xl font-light text-white tracking-tight mt-6 mb-4">
-            Lapland Photography & Landscapes
-        </h1>
-        <p id="page-desc" class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
-            A visual journey through the four seasons of the Fennoscandian region. From the mystical dance of the Northern Lights in winter to wildlife under the Midnight Sun in summer.
-        </p>
-    </header>
-
-    <!-- SEÇÃO DO PANORAMA CINEMATOGRÁFICO NO TOPO -->
-    <div class="max-w-6xl mx-auto px-4 mb-6">
-        <div class="relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer aspect-[21/9] sm:aspect-[3/1]" onclick="openLightbox(this)">
-            <img src="images/hero_aurora.jpg" alt="Epic Panoramic View of the Arctic Horizon" class="w-full h-full object-cover transform group-hover:scale-101 transition duration-500">
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Swedish Lapland</span>
+    <!-- SEÇÃO 1: HERO (Widescreen Sem Bordas Brancas) -->
+    <header class="w-full bg-[#070b14]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4">
+            
+            <!-- Lado Esquerdo: Aurora -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
+                <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
+                <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+            
+            <!-- Lado Direito: Interior Comercial -->
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
+                <img src="images/hero_interior.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
+                <div class="absolute inset-0 bg-black/10"></div>
             </div>
         </div>
-    </div>
+        
+        <!-- Texto de Impacto Elegante -->
+        <div class="max-w-5xl mx-auto text-center py-12 px-4">
+            <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-white tracking-tight leading-tight mb-4 drop-shadow">
+                Capturing the light and atmosphere of the North.
+            </h1>
+            <p id="hero-desc" class="text-gray-400 text-base md:text-xl font-light max-w-2xl mx-auto">
+                From the vastness of the Arctic sky to the comfort of your home.
+            </p>
+        </div>
+    </header>
 
-    <!-- GRADE MASONRY PINTEREST -->
-    <main class="max-w-6xl mx-auto px-4 pb-24 w-full flex-grow">
-        <div class="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6 [column-fill:_balance]">
+    <!-- SEÇÃO 2: PORTFÓLIO DIVIDIDO (Mosaicos Premium com efeito Vidro Escuro) -->
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
             
-            <!-- FOTO 1 -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/aurora_1.jpg" alt="Aurora Borealis in Överkalix" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+            <!-- CARD ESQUERDO: IMOBILIÁRIA -->
+            <div class="bg-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
+                
+                <!-- Grade do Mosaico -->
+                <div class="grid grid-cols-3 gap-2 p-3 h-56 lg:h-64 bg-black/20">
+                    <div class="col-span-2 rounded-lg overflow-hidden h-full">
+                        <img src="images/re_1.jpg" alt="Real Estate 1" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
+                    </div>
+                    <div class="col-span-1 grid grid-rows-2 gap-2 h-full">
+                        <div class="rounded-lg overflow-hidden h-full">
+                            <img src="images/re_2.jpg" alt="Real Estate 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden h-full">
+                            <img src="images/re_3.jpg" alt="Real Estate 3" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo do Card -->
+                <div class="p-6 lg:p-8 flex-grow flex flex-col justify-between items-start">
+                    <div>
+                        <h2 id="card1-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Fotografia Imobiliária & Comercial</h2>
+                        <p id="card1-desc" class="text-gray-400 text-sm lg:text-base leading-relaxed mb-6">
+                            Fotografia profissional para o mercado imobiliário, arquitetura e tours virtuais 360°.
+                        </p>
+                    </div>
+                    <!-- Botão em contraste branco/nítido -->
+                    <a href="imobiliaria.html" id="card1-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-lg transition shadow-md">
+                        Ver Portfólio Comercial
+                    </a>
                 </div>
             </div>
 
-            <!-- FOTO 2 -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/aurora_2.jpg" alt="Dancing Lights over Kalix River" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+            <!-- CARD DIREITO: ARTES & PAISAGEM -->
+            <div class="bg-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
+                
+                <!-- Grade do Mosaico -->
+                <div class="grid grid-cols-3 gap-2 p-3 h-56 lg:h-64 bg-black/20">
+                    <div class="col-span-2 rounded-lg overflow-hidden h-full">
+                        <img src="images/aurora_1.jpg" alt="Aurora 1" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
+                    </div>
+                    <div class="col-span-1 grid grid-rows-2 gap-2 h-full">
+                        <div class="rounded-lg overflow-hidden h-full">
+                            <img src="images/aurora_2.jpg" alt="Aurora 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden h-full">
+                            <img src="images/aurora_3.jpg" alt="Aurora 3" class="w-full h-full object-cover">
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- FOTO 3 (VERTICAL DA AURORA) -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/aurora_5.jpg" alt="Blood Red Aurora" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Kalix River</span>
-                </div>
-            </div>
-
-            <!-- FOTO 4 -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/aurora_3.jpg" alt="My Backyard" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
-                </div>
-            </div>
-
-            <!-- FOTO 5 (RENA) -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/rena_sunset01.jpg" alt="Wild Reindeer during Sunset" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Lapland, Sweden</span>
-                </div>
-            </div>
-
-            <!-- FOTO 6 -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/aurora_4.jpg" alt="Aurora Beach" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Lansjärv, Sweden</span>
-                </div>
-            </div>
-
-            <!-- FOTO 7 -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/aurora_6.jpg" alt="Aurora and Light Pillars" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Kautokeino, Norway</span>
-                </div>
-            </div>
-
-            <!-- FOTO 8 (VERTICAL DO GELO / PESSOA CASACO VERMELHO) -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/ice_landscape01.jpg" alt="Winter Ice Formations" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Abisko, Sweden</span>
-                </div>
-            </div>
-
-            <!-- FOTO 9 (LEBRE) -->
-            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
-                <img src="images/moose_01.jpg" alt="Arctic Wildlife" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
-                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Kiruna, Sweden</span>
+                <!-- Conteúdo do Card -->
+                <div class="p-6 lg:p-8 flex-grow flex flex-col justify-between items-start">
+                    <div>
+                        <h2 id="card2-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Belas Artes & Paisagens Árticas</h2>
+                        <p id="card2-desc" class="text-gray-400 text-sm lg:text-base leading-relaxed mb-6">
+                            Fotografias de paisagem, astrofotografia e impressões Fine Art da natureza nórdica.
+                        </p>
+                    </div>
+                    <!-- Botão em contraste branco/nítido -->
+                    <a href="galeria.html" id="card2-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-lg transition shadow-md">
+                        Explorar Galeria Ártica
+                    </a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- LIGHTBOX MODAL DIALOG -->
-    <div id="lightbox" class="fixed inset-0 bg-black/95 hidden z-50 flex items-center justify-center p-4" onclick="closeLightbox()">
-        <span class="absolute top-6 right-6 text-white text-3xl font-light cursor-pointer select-none hover:text-gray-400 transition">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain">
-    </div>
+    <!-- SEÇÃO 3: SOBRE (Faixa de Destaque Escura) -->
+    <section class="w-full bg-black/20 border-t border-b border-gray-900 py-16 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 id="about-title" class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Rigor Técnico & Sensibilidade Visual</h2>
+            <p id="about-desc" class="text-gray-300 text-base md:text-lg font-light leading-relaxed">
+                Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.
+            </p>
+        </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="w-full py-12 text-center px-4 border-t border-gray-900 bg-black/10">
-        <p id="footer-rights" class="text-xs text-gray-600">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+    <!-- SEÇÃO 4: RODAPÉ & CONTATO -->
+    <footer class="w-full py-12 text-center px-4 bg-[#070b14]">
+        <div class="max-w-3xl mx-auto">
+            <h2 id="footer-title" class="text-lg font-bold text-white mb-1">Vamos colaborar?</h2>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
+            
+            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
+                Enviar um E-mail
+            </a>
+            
+            <p id="footer-notice" class="text-xs text-amber-400/90 font-medium mt-6 bg-amber-950/20 inline-block px-3 py-1.5 rounded-full border border-amber-900/30 backdrop-blur-sm">
+                🔒 Nota: As galerias de entrega para clientes são privadas e protegidas por criptografia.
+            </p>
+            
+            <p id="footer-rights" class="text-xs text-gray-600 mt-12">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    <!-- LIGHTBOX LOGIC -->
-    <script>
-        function openLightbox(element) {
-            const imgSrc = element.querySelector('img').src;
-            const imgAlt = element.querySelector('img').alt;
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = imgSrc;
-            lightboxImg.alt = imgAlt;
-            lightbox.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-    </script>
-
-    <!-- SCRIPT DE TRADUÇÃO DO PORTFÓLIO -->
+    <!-- SCRIPT DE TRADUÇÃO -->
     <script>
         const translations = {
             en: {
-                navBack: "← Back to Home", pageBadge: "THE LAPLAND COLLECTION",
-                pageTitle: "Lapland Photography & Landscapes",
-                pageDesc: "A visual journey through the four seasons of the Fennoscandian region. From the mystical dance of the Northern Lights in winter to wildlife under the Midnight Sun in summer.",
+                navMain: "← Back to Home",
+                navCyber: "Cybersecurity & IT →",
+                heroTitle: "Capturing the light and atmosphere of the North.",
+                heroDesc: "From the vastness of the Arctic sky to the comfort of your home.",
+                card1Title: "Real Estate & Commercial Photography",
+                card1Desc: "Professional photography for the real estate market, architecture, and 360° virtual tours.",
+                card1Btn: "View Commercial Portfolio",
+                card2Title: "Fine Art & Arctic Landscapes",
+                card2Desc: "Landscape photography, astrophotography, and Fine Art prints of Nordic nature.",
+                card2Btn: "Explore Arctic Gallery",
+                aboutTitle: "Technical Precision & Visual Sensitivity",
+                aboutDesc: "Using high-resolution equipment and technical precision developed while capturing phenomena like the Northern Lights, I apply the same rigor to architectural imagery, emphasizing natural light and spatial geometry.",
+                footerTitle: "Let's work together?",
+                footerDesc: "Get in touch for real estate, commercial photography quotes, or Fine Art image licensing.",
+                footerBtn: "Send an Email",
+                footerNotice: "🔒 Note: Client delivery galleries are private and securely encrypted.",
                 footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
             },
             sv: {
-                navBack: "← Tillbaka till Hem", pageBadge: "LAPPLANDSSAMLINGEN",
-                pageTitle: "Lapplandsfotografi & Landskap",
-                pageDesc: "En visuell resa genom de fyra årstiderna i den fennoskandiska regionen. Från norrskenets mystiska dans på vintern till vilda djur under midnattssolen på sommaren.",
+                navMain: "← Tillbaka till Hem",
+                navCyber: "Cybersäkerhet & IT →",
+                heroTitle: "Fånga ljuset och atmosfären i norr.",
+                heroDesc: "Från den arktiska himlens vidd till bekvämligheten i ditt hem.",
+                card1Title: "Fastighets- & Kommersiell Fotografering",
+                card1Desc: "Professionell fotografering för fastighetsmarknaden, arkitektur och 360° virtuella turer.",
+                card1Btn: "Visa Kommersiell Portfölj",
+                card2Title: "Fine Art & Arktiska Landskap",
+                card2Desc: "Landskapsfotografering, astrofotografering och Fine Art-utskrifter av nordisk natur.",
+                card2Btn: "Utforska Arktiskt Galleri",
+                aboutTitle: "Teknisk Precision & Visuell Känsla",
+                aboutDesc: "Med högupplöst utrustning och teknisk precision utvecklad under fångsten av fenomen som norrsken, tillämpar jag samma noggrannhet på arkitektoniska bilder, med fokus på naturligt ljus och rymdgeometri.",
+                footerTitle: "Ska vi samarbeta?",
+                footerDesc: "Kontakta oss för offerter gällande fastighets- och kommersiell fotografering eller licensiering av Fine Art-bilder.",
+                footerBtn: "Skicka ett mejl",
+                footerNotice: "🔒 Obs: Gallerier för kundleverans är privata och säkert krypterade.",
                 footerRights: "© 2026 Boreal One AB. Med ensamrätt."
             },
             pt: {
-                navBack: "← Voltar ao Início", pageBadge: "A COLEÇÃO DA LAPÔNIA",
-                pageTitle: "Fotografia & Paisagens da Lapônia",
-                pageDesc: "Uma jornada visual pelas quatro estações da região feno-escandinava. Da dança mística da Aurora Boreal no inverno à vida selvagem sob o Sol da Meia-Noite no verão.",
+                navMain: "← Voltar ao Início",
+                navCyber: "Cibersegurança & TI →",
+                heroTitle: "Capturando a luz e a atmosfera do Norte.",
+                heroDesc: "Da imensidão do céu ártico ao conforto do seu lar.",
+                card1Title: "Fotografia Imobiliária & Comercial",
+                card1Desc: "Fotografia profissional para o mercado imobiliário, arquitetura e tours virtuais 360°.",
+                card1Btn: "Ver Portfólio Comercial",
+                card2Title: "Belas Artes & Paisagens Árticas",
+                card2Desc: "Fotografias de paisagem, astrofotografia e impressões Fine Art da natureza nórdica.",
+                card2Btn: "Explorar Galeria Ártica",
+                aboutTitle: "Rigor Técnico & Sensibilidade Visual",
+                aboutDesc: "Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.",
+                footerTitle: "Vamos colaborar?",
+                footerDesc: "Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.",
+                footerBtn: "Enviar um E-mail",
+                footerNotice: "🔒 Nota: As galerias de entrega para clientes são privadas e protegidas por criptografia.",
                 footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
             }
         };
 
         function setLanguage(lang) {
-            if(document.getElementById('nav-back-link')) document.getElementById('nav-back-link').textContent = translations[lang].navBack;
-            if(document.getElementById('page-badge')) document.getElementById('page-badge').textContent = translations[lang].pageBadge;
-            if(document.getElementById('page-title')) document.getElementById('page-title').textContent = translations[lang].pageTitle;
-            if(document.getElementById('page-desc')) document.getElementById('page-desc').textContent = translations[lang].pageDesc;
-            if(document.getElementById('footer-rights')) document.getElementById('footer-rights').textContent = translations[lang].footerRights;
+            document.getElementById('nav-main-link').textContent = translations[lang].navMain;
+            document.getElementById('nav-cyber-link').textContent = translations[lang].navCyber;
+            document.getElementById('hero-title').textContent = translations[lang].heroTitle;
+            document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
+            document.getElementById('card1-title').textContent = translations[lang].card1Title;
+            document.getElementById('card1-desc').textContent = translations[lang].card1Desc;
+            document.getElementById('card1-btn').textContent = translations[lang].card1Btn;
+            document.getElementById('card2-title').textContent = translations[lang].card2Title;
+            document.getElementById('card2-desc').textContent = translations[lang].card2Desc;
+            document.getElementById('card2-btn').textContent = translations[lang].card2Btn;
+            document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+            document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
+            document.getElementById('footer-title').textContent = translations[lang].footerTitle;
+            document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
+            document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
+            document.getElementById('footer-notice').textContent = translations[lang].footerNotice;
+            document.getElementById('footer-rights').textContent = translations[lang].footerRights;
 
             ['en', 'sv', 'pt'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
-                if (btn) {
-                    if (l === lang) btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
-                    else btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
+                if (l === lang) {
+                    btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
+                } else {
+                    btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
                 }
             });
             localStorage.setItem('preferred-lang', lang);
@@ -221,7 +279,16 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred-lang');
-            setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[navigator.language.substring(0, 2)] ? navigator.language.substring(0, 2) : 'en'));
+            if (savedLang && translations[savedLang]) {
+                setLanguage(savedLang);
+            } else {
+                const browserLang = navigator.language.substring(0, 2);
+                if (translations[browserLang]) {
+                    setLanguage(browserLang);
+                } else {
+                    setLanguage('en');
+                }
+            }
         });
     </script>
 </body>

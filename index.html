@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boreal One Media | Photography</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
     <link class="apple-touch-icon" href="favicon.png">
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,74 +22,58 @@
 </head>
 <body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- NAV BAR (Estilo Cinema / Minimalista Escuro) -->
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
             
-            <!-- Logo + Nome (Corrigido para ficar redondo) -->
-            <a href="https://borealone.com" class="flex items-center space-x-3 group">
-                <!-- Adicionamos rounded-full e object-cover para cortar o fundo branco em um círculo perfeito -->
-                <img src="boreal_one_logo_noname.jpg" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
             
-            <div class="flex items-center space-x-4">
-                <!-- Links de Roteamento -->
-                <div class="hidden sm:flex items-center space-x-2 text-xs font-medium">
-                    <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white px-3 py-1.5 transition">
-                        ← Voltar ao Início
-                    </a>
-                    <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-900/50 hover:bg-gray-900 text-gray-300 px-3 py-1.5 rounded border border-gray-800 transition">
-                        Cybersecurity & IT →
-                    </a>
-                </div>
-
-                <!-- SELETOR DE IDIOMA -->
-                <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold">
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
-                </div>
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
             </div>
+
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
+                    ← Voltar ao Início
+                </a>
+                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-950 hover:bg-gray-900 text-aurora px-3 py-1.5 rounded border border-gray-800/80 transition uppercase tracking-wider sm:normal-case font-bold">
+                    Cybersecurity & IT →
+                </a>
+            </div>
+
         </div>
     </nav>
 
-    <!-- SEÇÃO 1: HERO (Widescreen Sem Bordas Brancas) -->
     <header class="w-full bg-[#070b14]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4">
-            
-            <!-- Lado Esquerdo: Aurora -->
             <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
                 <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
                 <div class="absolute inset-0 bg-black/10"></div>
             </div>
-            
-            <!-- Lado Direito: Interior Comercial -->
             <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
-                <img src="images/hero_interior.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
+                <img src="images/re_1.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
                 <div class="absolute inset-0 bg-black/10"></div>
             </div>
         </div>
         
-        <!-- Texto de Impacto Elegante -->
         <div class="max-w-5xl mx-auto text-center py-12 px-4">
             <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-white tracking-tight leading-tight mb-4 drop-shadow">
                 Capturing the light and atmosphere of the North.
             </h1>
-            <p id="hero-desc" class="text-gray-400 text-base md:text-xl font-light max-w-2xl mx-auto">
+            <p id="hero-desc" class="text-gray-400 text-sm md:text-xl font-light max-w-2xl mx-auto">
                 From the vastness of the Arctic sky to the comfort of your home.
             </p>
         </div>
     </header>
 
-    <!-- SEÇÃO 2: PORTFÓLIO DIVIDIDO (Mosaicos Premium com efeito Vidro Escuro) -->
     <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow">
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
             
-            <!-- CARD ESQUERDO: IMOBILIÁRIA -->
             <div class="bg-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
-                
-                <!-- Grade do Mosaico -->
                 <div class="grid grid-cols-3 gap-2 p-3 h-56 lg:h-64 bg-black/20">
                     <div class="col-span-2 rounded-lg overflow-hidden h-full">
                         <img src="images/re_1.jpg" alt="Real Estate 1" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
@@ -105,26 +87,20 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo do Card -->
                 <div class="p-6 lg:p-8 flex-grow flex flex-col justify-between items-start">
                     <div>
                         <h2 id="card1-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Fotografia Imobiliária & Comercial</h2>
                         <p id="card1-desc" class="text-gray-400 text-sm lg:text-base leading-relaxed mb-6">
-                            Fotografia profissional para o mercado imobiliário, arquitetura e tours virtuais 360°.
+                            Fotografia profissional para o mercado imobiliário, arquitetura e soluções de mídia para propriedades.
                         </p>
                     </div>
-                    <!-- Botão em contraste branco/nítido -->
                     <a href="imobiliaria.html" id="card1-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-lg transition shadow-md">
                         Ver Portfólio Comercial
                     </a>
                 </div>
             </div>
 
-            <!-- CARD DIREITO: ARTES & PAISAGEM -->
             <div class="bg-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
-                
-                <!-- Grade do Mosaico -->
                 <div class="grid grid-cols-3 gap-2 p-3 h-56 lg:h-64 bg-black/20">
                     <div class="col-span-2 rounded-lg overflow-hidden h-full">
                         <img src="images/aurora_1.jpg" alt="Aurora 1" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-700">
@@ -134,22 +110,19 @@
                             <img src="images/aurora_2.jpg" alt="Aurora 2" class="w-full h-full object-cover">
                         </div>
                         <div class="rounded-lg overflow-hidden h-full">
-                            <img src="images/aurora_3.jpg" alt="Aurora 3" class="w-full h-full object-cover">
+                            <img src="images/aurora_5.jpg" alt="Aurora 3" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-
-                <!-- Conteúdo do Card -->
                 <div class="p-6 lg:p-8 flex-grow flex flex-col justify-between items-start">
                     <div>
-                        <h2 id="card2-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Belas Artes & Paisagens Árticas</h2>
+                        <h2 id="card2-title" class="text-xl lg:text-2xl font-bold text-white mb-3">Belas Artes & Paisagens da Lapônia</h2>
                         <p id="card2-desc" class="text-gray-400 text-sm lg:text-base leading-relaxed mb-6">
-                            Fotografias de paisagem, astrofotografia e impressões Fine Art da natureza nórdica.
+                            Fotografias de paisagem, fenômenos atmospheric e a vida selvagem do norte feno-escandinavo.
                         </p>
                     </div>
-                    <!-- Botão em contraste branco/nítido -->
                     <a href="galeria.html" id="card2-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-lg transition shadow-md">
-                        Explorar Galeria Ártica
+                        Explorar Galeria da Lapônia
                     </a>
                 </div>
             </div>
@@ -157,7 +130,6 @@
         </div>
     </main>
 
-    <!-- SEÇÃO 3: SOBRE (Faixa de Destaque Escura) -->
     <section class="w-full bg-black/20 border-t border-b border-gray-900 py-16 px-4">
         <div class="max-w-3xl mx-auto text-center">
             <h2 id="about-title" class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Rigor Técnico & Sensibilidade Visual</h2>
@@ -167,13 +139,12 @@
         </div>
     </section>
 
-    <!-- SEÇÃO 4: RODAPÉ & CONTATO -->
     <footer class="w-full py-12 text-center px-4 bg-[#070b14]">
         <div class="max-w-3xl mx-auto">
-            <h2 id="footer-title" class="text-lg font-bold text-white mb-1">Vamos colaborar?</h2>
-            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
+            <h2 id="footer-title" class="text-xl font-bold text-white mb-1">Vamos colaborar?</h2>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
             
-            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
+            <a href="mailto:photos@borealone.com?subject=Inquiry%20from%20Portfolio" id="footer-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
                 Enviar um E-mail
             </a>
             
@@ -185,7 +156,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE TRADUÇÃO -->
     <script>
         const translations = {
             en: {
@@ -194,11 +164,11 @@
                 heroTitle: "Capturing the light and atmosphere of the North.",
                 heroDesc: "From the vastness of the Arctic sky to the comfort of your home.",
                 card1Title: "Real Estate & Commercial Photography",
-                card1Desc: "Professional photography for the real estate market, architecture, and 360° virtual tours.",
+                card1Desc: "Professional photography for the real estate market, architecture, and property media solutions.",
                 card1Btn: "View Commercial Portfolio",
-                card2Title: "Fine Art & Arctic Landscapes",
-                card2Desc: "Landscape photography, astrophotography, and Fine Art prints of Nordic nature.",
-                card2Btn: "Explore Arctic Gallery",
+                card2Title: "Fine Art & Lapland Landscapes",
+                card2Desc: "Landscape photography, atmospheric phenomena, and wildlife from the Fennoscandian north.",
+                card2Btn: "Explore Lapland Gallery",
                 aboutTitle: "Technical Precision & Visual Sensitivity",
                 aboutDesc: "Using high-resolution equipment and technical precision developed while capturing phenomena like the Northern Lights, I apply the same rigor to architectural imagery, emphasizing natural light and spatial geometry.",
                 footerTitle: "Let's work together?",
@@ -213,18 +183,18 @@
                 heroTitle: "Fånga ljuset och atmosfären i norr.",
                 heroDesc: "Från den arktiska himlens vidd till bekvämligheten i ditt hem.",
                 card1Title: "Fastighets- & Kommersiell Fotografering",
-                card1Desc: "Professionell fotografering för fastighetsmarknaden, arkitektur och 360° virtuella turer.",
+                card1Desc: "Professionell fotografering för fastighetsmarknaden, arkitektur och fastighetsmedielösningar.",
                 card1Btn: "Visa Kommersiell Portfölj",
-                card2Title: "Fine Art & Arktiska Landskap",
-                card2Desc: "Landskapsfotografering, astrofotografering och Fine Art-utskrifter av nordisk natur.",
-                card2Btn: "Utforska Arktiskt Galleri",
+                card2Title: "Fine Art & Lapplandslandskap",
+                card2Desc: "Landskapsfotografering, atmosfäriska fenomen och vilda djur från den fennoskandiska norden.",
+                card2Btn: "Utforska Lapplandssamlingen",
                 aboutTitle: "Teknisk Precision & Visuell Känsla",
                 aboutDesc: "Med högupplöst utrustning och teknisk precision utvecklad under fångsten av fenomen som norrsken, tillämpar jag samma noggrannhet på arkitektoniska bilder, med fokus på naturligt ljus och rymdgeometri.",
                 footerTitle: "Ska vi samarbeta?",
                 footerDesc: "Kontakta oss för offerter gällande fastighets- och kommersiell fotografering eller licensiering av Fine Art-bilder.",
                 footerBtn: "Skicka ett mejl",
                 footerNotice: "🔒 Obs: Gallerier för kundleverans är privata och säkert krypterade.",
-                footerRights: "© 2026 Boreal One AB. Med ensamrätt."
+                footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
             },
             pt: {
                 navMain: "← Voltar ao Início",
@@ -232,11 +202,11 @@
                 heroTitle: "Capturando a luz e a atmosfera do Norte.",
                 heroDesc: "Da imensidão do céu ártico ao conforto do seu lar.",
                 card1Title: "Fotografia Imobiliária & Comercial",
-                card1Desc: "Fotografia profissional para o mercado imobiliário, arquitetura e tours virtuais 360°.",
+                card1Desc: "Fotografia profissional para o mercado imobiliário, arquitetura e soluções de mídia para propriedades.",
                 card1Btn: "Ver Portfólio Comercial",
-                card2Title: "Belas Artes & Paisagens Árticas",
-                card2Desc: "Fotografias de paisagem, astrofotografia e impressões Fine Art da natureza nórdica.",
-                card2Btn: "Explorar Galeria Ártica",
+                card2Title: "Belas Artes & Paisagens da Lapônia",
+                card2Desc: "Fotografias de paisagem, fenômenos atmosféricos e a vida selvagem do norte feno-escandinavo.",
+                card2Btn: "Explorar Galeria da Lapônia",
                 aboutTitle: "Rigor Técnico & Sensibilidade Visual",
                 aboutDesc: "Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.",
                 footerTitle: "Vamos colaborar?",
@@ -248,30 +218,32 @@
         };
 
         function setLanguage(lang) {
-            document.getElementById('nav-main-link').textContent = translations[lang].navMain;
-            document.getElementById('nav-cyber-link').textContent = translations[lang].navCyber;
-            document.getElementById('hero-title').textContent = translations[lang].heroTitle;
-            document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
-            document.getElementById('card1-title').textContent = translations[lang].card1Title;
-            document.getElementById('card1-desc').textContent = translations[lang].card1Desc;
-            document.getElementById('card1-btn').textContent = translations[lang].card1Btn;
-            document.getElementById('card2-title').textContent = translations[lang].card2Title;
-            document.getElementById('card2-desc').textContent = translations[lang].card2Desc;
-            document.getElementById('card2-btn').textContent = translations[lang].card2Btn;
-            document.getElementById('about-title').textContent = translations[lang].aboutTitle;
-            document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
-            document.getElementById('footer-title').textContent = translations[lang].footerTitle;
-            document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
-            document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
-            document.getElementById('footer-notice').textContent = translations[lang].footerNotice;
-            document.getElementById('footer-rights').textContent = translations[lang].footerRights;
+            if(document.getElementById('nav-main-link')) document.getElementById('nav-main-link').textContent = translations[lang].navMain;
+            if(document.getElementById('nav-cyber-link')) document.getElementById('nav-cyber-link').textContent = translations[lang].navCyber;
+            if(document.getElementById('hero-title')) document.getElementById('hero-title').textContent = translations[lang].heroTitle;
+            if(document.getElementById('hero-desc')) document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
+            if(document.getElementById('card1-title')) document.getElementById('card1-title').textContent = translations[lang].card1Title;
+            if(document.getElementById('card1-desc')) document.getElementById('card1-desc').textContent = translations[lang].card1Desc;
+            if(document.getElementById('card1-btn')) document.getElementById('card1-btn').textContent = translations[lang].card1Btn;
+            if(document.getElementById('card2-title')) document.getElementById('card2-title').textContent = translations[lang].card2Title;
+            if(document.getElementById('card2-desc')) document.getElementById('card2-desc').textContent = translations[lang].card2Desc;
+            if(document.getElementById('card2-btn')) document.getElementById('card2-btn').textContent = translations[lang].card2Btn;
+            if(document.getElementById('about-title')) document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+            if(document.getElementById('about-desc')) document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
+            if(document.getElementById('footer-title')) document.getElementById('footer-title').textContent = translations[lang].footerTitle;
+            if(document.getElementById('footer-desc')) document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
+            if(document.getElementById('footer-btn')) document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
+            if(document.getElementById('footer-notice')) document.getElementById('footer-notice').textContent = translations[lang].footerNotice;
+            if(document.getElementById('footer-rights')) document.getElementById('footer-rights').textContent = translations[lang].footerRights;
 
             ['en', 'sv', 'pt'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
-                if (l === lang) {
-                    btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
-                } else {
-                    btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
+                if (btn) {
+                    if (l === lang) {
+                        btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
+                    } else {
+                        btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
+                    }
                 }
             });
             localStorage.setItem('preferred-lang', lang);
@@ -279,16 +251,7 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred-lang');
-            if (savedLang && translations[savedLang]) {
-                setLanguage(savedLang);
-            } else {
-                const browserLang = navigator.language.substring(0, 2);
-                if (translations[browserLang]) {
-                    setLanguage(browserLang);
-                } else {
-                    setLanguage('en');
-                }
-            }
+            setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[navigator.language.substring(0, 2)] ? navigator.language.substring(0, 2) : 'en'));
         });
     </script>
 </body>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Private Northern Lights photography sessions in Swedish Lapland.">
+    <title>Private Aurora Sessions | Boreal One Media</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcticDark: '#060a13',
+                        aurora: '#00f5d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col overflow-x-hidden">
+
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+            <a href="index.html" class="flex items-center space-x-3 group order-1">
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            </a>
+
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
+            </div>
+
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="index.html" id="nav-back-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">← Back to Home</a>
+                <a href="galeria.html" id="nav-gallery-link" class="text-aurora hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">Lapland Gallery →</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[560px] sm:min-h-[620px] flex items-center border-b border-gray-900 overflow-hidden">
+        <img src="images/hero_aurora.jpg" alt="Northern Lights over Swedish Lapland" class="absolute inset-0 h-full w-full object-cover object-center" id="hero-image">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#070b14]/70 via-[#070b14]/45 to-[#070b14]"></div>
+        <div class="relative z-10 max-w-5xl mx-auto w-full px-4 pt-20 pb-24 text-center">
+            <span id="hero-eyebrow" class="inline-block text-aurora text-xs font-bold tracking-[0.18em] uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">Swedish Lapland</span>
+            <h1 id="hero-title" class="whitespace-pre-line text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-tight leading-tight mt-6 mb-5">Private Northern Lights
+Photography Sessions</h1>
+            <p id="hero-desc" class="text-gray-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto">A calm, personal memory beneath the Arctic sky — planned around the conditions, your stay, and the natural light.</p>
+            <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="mailto:photos@borealone.com?subject=Private%20Aurora%20Session" id="hero-cta" class="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Book a session</a>
+                <a href="#packages" id="hero-packages-link" class="w-full sm:w-auto inline-flex items-center justify-center border border-white/20 hover:border-white/50 bg-black/10 hover:bg-black/25 text-white font-semibold text-sm px-7 py-3.5 rounded-xl transition">Explore the packages</a>
+            </div>
+            <p id="hero-note" class="mt-5 text-xs text-gray-300/90 tracking-wide">Personal. Private. Planned for the conditions.</p>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-800 shadow-2xl bg-gray-950 order-2 md:order-1">
+                    <img src="images/aurora_2.jpg" id="intro-image" alt="Northern Lights photography in Överkalix" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+                    <span id="intro-image-caption" class="absolute left-4 bottom-4 text-xs tracking-wider text-white/90">Överkalix, Swedish Lapland</span>
+                </div>
+                <div class="order-1 md:order-2">
+                    <p id="intro-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">Your evening, thoughtfully documented</p>
+                    <h2 id="intro-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-5">More than a photograph of the sky.</h2>
+                    <p id="intro-text-1" class="text-gray-300 text-base leading-relaxed mb-4">These are private, unhurried sessions for couples, families, and small groups who want to bring home a real piece of their time in the North.</p>
+                    <p id="intro-text-2" class="text-gray-400 text-sm md:text-base leading-relaxed">I will guide the practical details — location, timing, simple posing, and camera settings — so you can stay present while the Arctic night does its work.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="packages" class="border-y border-gray-900 bg-black/15 py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
+                    <p id="packages-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">Choose your experience</p>
+                    <h2 id="packages-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-4">Private sessions, simply priced.</h2>
+                    <p id="packages-desc" class="text-gray-400 text-sm md:text-base leading-relaxed">Every package is private and includes thoughtful planning around the local conditions.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+                    <article class="rounded-2xl border border-gray-800 bg-[#090e19] p-6 md:p-7 shadow-xl flex flex-col">
+                        <p id="mini-label" class="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 mb-5">A short, beautiful memory</p>
+                        <h3 id="mini-title" class="text-2xl font-semibold text-white">Aurora Mini</h3>
+                        <p class="mt-3 mb-6"><span class="text-3xl font-light text-white">700 SEK</span></p>
+                        <p id="mini-desc" class="text-sm text-gray-400 leading-relaxed mb-6">A simple private session for a couple or a small family who want a few lasting images beneath the Northern Lights.</p>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="mini-item-1">Up to 20 minutes of photography</span></li>
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="mini-item-2">5 carefully edited digital images</span></li>
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="mini-item-3">Simple posing and location guidance</span></li>
+                        </ul>
+                        <a href="mailto:photos@borealone.com?subject=Private%20Aurora%20Session%20-%20Aurora%20Mini" id="mini-cta" class="mt-auto inline-flex justify-center items-center w-full border border-gray-700 hover:border-gray-500 hover:bg-white/5 text-white font-semibold text-sm px-5 py-3 rounded-xl transition">Ask about Aurora Mini</a>
+                    </article>
+
+                    <article class="relative rounded-2xl border border-aurora/50 bg-gradient-to-b from-aurora/10 to-[#090e19] p-6 md:p-7 shadow-2xl shadow-aurora/5 flex flex-col">
+                        <span id="experience-badge" class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-aurora text-gray-950 text-[11px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full">Most popular</span>
+                        <p id="experience-label" class="text-xs font-bold tracking-[0.16em] uppercase text-aurora/80 mb-5">The complete evening</p>
+                        <h3 id="experience-title" class="text-2xl font-semibold text-white">Aurora Experience</h3>
+                        <p class="mt-3 mb-6"><span class="text-3xl font-light text-white">1,800 SEK</span></p>
+                        <p id="experience-desc" class="text-sm text-gray-300 leading-relaxed mb-6">Our most balanced private session, with time to settle in, enjoy the night, and create a fuller set of images.</p>
+                        <ul class="space-y-3 text-sm text-gray-200 mb-8">
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="experience-item-1">60–90 minutes of photography</span></li>
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="experience-item-2">15 carefully edited digital images</span></li>
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="experience-item-3">Relaxed guidance for portraits and candid moments</span></li>
+                        </ul>
+                        <a href="mailto:photos@borealone.com?subject=Private%20Aurora%20Session%20-%20Aurora%20Experience" id="experience-cta" class="mt-auto inline-flex justify-center items-center w-full bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md">Ask about Aurora Experience</a>
+                    </article>
+
+                    <article class="rounded-2xl border border-gray-800 bg-[#090e19] p-6 md:p-7 shadow-xl flex flex-col">
+                        <p id="story-label" class="text-xs font-bold tracking-[0.16em] uppercase text-gray-500 mb-5">A night with room to unfold</p>
+                        <h3 id="story-title" class="text-2xl font-semibold text-white">Aurora Story</h3>
+                        <p class="mt-3 mb-6"><span class="text-3xl font-light text-white">3,500 SEK</span></p>
+                        <p id="story-desc" class="text-sm text-gray-400 leading-relaxed mb-6">A longer, more considered evening for those who want a fuller story of their Arctic experience.</p>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="story-item-1">Up to 2 hours of photography</span></li>
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="story-item-2">30 carefully edited digital images</span></li>
+                            <li class="flex gap-3"><span class="text-aurora">•</span><span id="story-item-3">More time for location, portraits, and atmosphere</span></li>
+                        </ul>
+                        <a href="mailto:photos@borealone.com?subject=Private%20Aurora%20Session%20-%20Aurora%20Story" id="story-cta" class="mt-auto inline-flex justify-center items-center w-full border border-gray-700 hover:border-gray-500 hover:bg-white/5 text-white font-semibold text-sm px-5 py-3 rounded-xl transition">Ask about Aurora Story</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+            <div class="rounded-2xl overflow-hidden border border-gray-800 bg-gradient-to-r from-[#0b1620] to-[#090e19] grid grid-cols-1 md:grid-cols-5 shadow-2xl">
+                <div class="md:col-span-2 min-h-64 relative">
+                    <img src="images/aurora_1.jpg" id="guest-image" alt="Aurora above Överkalix" class="absolute inset-0 h-full w-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0b1620]/80"></div>
+                </div>
+                <div class="md:col-span-3 p-7 md:p-10">
+                    <p id="guest-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">For Boreal One accommodation guests</p>
+                    <h2 id="guest-title" class="text-2xl md:text-3xl font-light text-white tracking-tight mb-4">Let the session fit naturally into your stay.</h2>
+                    <p id="guest-desc" class="text-sm md:text-base text-gray-300 leading-relaxed mb-6">Staying with Boreal One? We can coordinate your session around your arrival, plans, and the best available conditions during your visit.</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-gray-300 mb-7">
+                        <li id="guest-item-1" class="border border-white/10 bg-black/15 rounded-lg p-3">Easy planning around your stay</li>
+                        <li id="guest-item-2" class="border border-white/10 bg-black/15 rounded-lg p-3">Local location guidance</li>
+                        <li id="guest-item-3" class="border border-white/10 bg-black/15 rounded-lg p-3">A private experience at your own pace</li>
+                    </ul>
+                    <a href="mailto:photos@borealone.com?subject=Private%20Aurora%20Session%20for%20Boreal%20One%20Guest" id="guest-cta" class="inline-flex items-center justify-center text-aurora hover:text-white font-semibold text-sm transition">Plan your stay and session →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-4 pb-16 md:pb-24">
+            <div class="border border-amber-400/25 bg-amber-950/15 rounded-2xl p-6 md:p-8">
+                <p id="notice-eyebrow" class="text-amber-300 text-xs font-bold tracking-[0.18em] uppercase mb-3">Important to know</p>
+                <h2 id="notice-title" class="text-xl md:text-2xl font-medium text-white mb-3">The Aurora is a natural phenomenon.</h2>
+                <p id="notice-text" class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">Its strength, visibility, and colours can never be guaranteed. Your booking is for a private photography session — not a guaranteed Aurora appearance.</p>
+                <p id="notice-reschedule" class="text-sm text-gray-400 leading-relaxed">Cloud cover, weather, or safety conditions can make a session unsuitable. If that happens, we will offer to reschedule during your stay or for the next suitable date, subject to availability.</p>
+            </div>
+        </section>
+
+        <section class="border-t border-gray-900 bg-black/25 py-16 md:py-20 text-center px-4">
+            <div class="max-w-2xl mx-auto">
+                <p id="booking-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">Ready when the sky is</p>
+                <h2 id="booking-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-4">Tell us about your visit.</h2>
+                <p id="booking-desc" class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">Send your dates, group size, and preferred package. We will reply with availability and the next practical steps.</p>
+                <a href="mailto:photos@borealone.com?subject=Private%20Aurora%20Session" id="booking-cta" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Email photos@borealone.com</a>
+                <p id="booking-note" class="mt-4 text-xs text-gray-500">Private Aurora sessions in Swedish Lapland.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-10 text-center px-4 bg-[#070b14]">
+        <p id="footer-rights" class="text-xs text-gray-600">© 2026 Boreal One AB. Registered in Sweden. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                navBack: "← Back to Home",
+                navGallery: "Lapland Gallery →",
+                heroEyebrow: "Swedish Lapland",
+                heroTitle: "Private Northern Lights\nPhotography Sessions",
+                heroDesc: "A calm, personal memory beneath the Arctic sky — planned around the conditions, your stay, and the natural light.",
+                heroCta: "Book a session",
+                heroPackagesLink: "Explore the packages",
+                heroNote: "Personal. Private. Planned for the conditions.",
+                introEyebrow: "Your evening, thoughtfully documented",
+                introTitle: "More than a photograph of the sky.",
+                introText1: "These are private, unhurried sessions for couples, families, and small groups who want to bring home a real piece of their time in the North.",
+                introText2: "I will guide the practical details — location, timing, simple posing, and camera settings — so you can stay present while the Arctic night does its work.",
+                introImageCaption: "Överkalix, Swedish Lapland",
+                packagesEyebrow: "Choose your experience",
+                packagesTitle: "Private sessions, simply priced.",
+                packagesDesc: "Every package is private and includes thoughtful planning around the local conditions.",
+                miniLabel: "A short, beautiful memory",
+                miniTitle: "Aurora Mini",
+                miniDesc: "A simple private session for a couple or a small family who want a few lasting images beneath the Northern Lights.",
+                miniItem1: "Up to 20 minutes of photography",
+                miniItem2: "5 carefully edited digital images",
+                miniItem3: "Simple posing and location guidance",
+                miniCta: "Ask about Aurora Mini",
+                experienceBadge: "Most popular",
+                experienceLabel: "The complete evening",
+                experienceTitle: "Aurora Experience",
+                experienceDesc: "Our most balanced private session, with time to settle in, enjoy the night, and create a fuller set of images.",
+                experienceItem1: "60–90 minutes of photography",
+                experienceItem2: "15 carefully edited digital images",
+                experienceItem3: "Relaxed guidance for portraits and candid moments",
+                experienceCta: "Ask about Aurora Experience",
+                storyLabel: "A night with room to unfold",
+                storyTitle: "Aurora Story",
+                storyDesc: "A longer, more considered evening for those who want a fuller story of their Arctic experience.",
+                storyItem1: "Up to 2 hours of photography",
+                storyItem2: "30 carefully edited digital images",
+                storyItem3: "More time for location, portraits, and atmosphere",
+                storyCta: "Ask about Aurora Story",
+                guestEyebrow: "For Boreal One accommodation guests",
+                guestTitle: "Let the session fit naturally into your stay.",
+                guestDesc: "Staying with Boreal One? We can coordinate your session around your arrival, plans, and the best available conditions during your visit.",
+                guestItem1: "Easy planning around your stay",
+                guestItem2: "Local location guidance",
+                guestItem3: "A private experience at your own pace",
+                guestCta: "Plan your stay and session →",
+                noticeEyebrow: "Important to know",
+                noticeTitle: "The Aurora is a natural phenomenon.",
+                noticeText: "Its strength, visibility, and colours can never be guaranteed. Your booking is for a private photography session — not a guaranteed Aurora appearance.",
+                noticeReschedule: "Cloud cover, weather, or safety conditions can make a session unsuitable. If that happens, we will offer to reschedule during your stay or for the next suitable date, subject to availability.",
+                bookingEyebrow: "Ready when the sky is",
+                bookingTitle: "Tell us about your visit.",
+                bookingDesc: "Send your dates, group size, and preferred package. We will reply with availability and the next practical steps.",
+                bookingCta: "Email photos@borealone.com",
+                bookingNote: "Private Aurora sessions in Swedish Lapland.",
+                footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+            },
+            sv: {
+                navBack: "← Tillbaka till Hem",
+                navGallery: "Lapplandssamlingen →",
+                heroEyebrow: "Svenska Lappland",
+                heroTitle: "Privata norrskens-\nfotograferingar",
+                heroDesc: "Ett lugnt, personligt minne under den arktiska himlen — planerat efter förhållandena, din vistelse och det naturliga ljuset.",
+                heroCta: "Boka en session",
+                heroPackagesLink: "Se paketen",
+                heroNote: "Personligt. Privat. Anpassat efter förhållandena.",
+                introEyebrow: "Din kväll, omsorgsfullt dokumenterad",
+                introTitle: "Mer än en bild av himlen.",
+                introText1: "Det här är privata sessioner i lugnt tempo för par, familjer och små sällskap som vill ta med sig ett äkta minne från sin tid i norr.",
+                introText2: "Jag vägleder de praktiska detaljerna — plats, tidpunkt, enkel posering och kamerainställningar — så att ni kan vara närvarande medan den arktiska natten gör sitt.",
+                introImageCaption: "Överkalix, svenska Lappland",
+                packagesEyebrow: "Välj din upplevelse",
+                packagesTitle: "Privata sessioner, enkla priser.",
+                packagesDesc: "Alla paket är privata och omfattar genomtänkt planering utifrån de lokala förhållandena.",
+                miniLabel: "Ett kort och vackert minne",
+                miniTitle: "Aurora Mini",
+                miniDesc: "En enkel privat session för ett par eller en liten familj som vill ha några bestående bilder under norrskenet.",
+                miniItem1: "Upp till 20 minuters fotografering",
+                miniItem2: "5 omsorgsfullt redigerade digitala bilder",
+                miniItem3: "Enkel vägledning för plats och posering",
+                miniCta: "Fråga om Aurora Mini",
+                experienceBadge: "Mest populär",
+                experienceLabel: "Den kompletta kvällen",
+                experienceTitle: "Aurora Experience",
+                experienceDesc: "Vår mest balanserade privata session, med tid att landa, njuta av kvällen och skapa en fylligare bildserie.",
+                experienceItem1: "60–90 minuters fotografering",
+                experienceItem2: "15 omsorgsfullt redigerade digitala bilder",
+                experienceItem3: "Lugn vägledning för porträtt och spontana ögonblick",
+                experienceCta: "Fråga om Aurora Experience",
+                storyLabel: "En kväll med plats att utvecklas",
+                storyTitle: "Aurora Story",
+                storyDesc: "En längre, mer genomtänkt kväll för dig som vill ha en fylligare berättelse om din arktiska upplevelse.",
+                storyItem1: "Upp till 2 timmars fotografering",
+                storyItem2: "30 omsorgsfullt redigerade digitala bilder",
+                storyItem3: "Mer tid för plats, porträtt och stämning",
+                storyCta: "Fråga om Aurora Story",
+                guestEyebrow: "För gäster i Boreal Ones boenden",
+                guestTitle: "Låt sessionen passa naturligt in i din vistelse.",
+                guestDesc: "Bor du hos Boreal One? Vi kan samordna din session med ankomst, planer och de bästa tillgängliga förhållandena under besöket.",
+                guestItem1: "Enkel planering under vistelsen",
+                guestItem2: "Lokal vägledning om plats",
+                guestItem3: "En privat upplevelse i din egen takt",
+                guestCta: "Planera din vistelse och session →",
+                noticeEyebrow: "Bra att veta",
+                noticeTitle: "Norrskenet är ett naturfenomen.",
+                noticeText: "Dess styrka, synlighet och färger kan aldrig garanteras. Din bokning gäller en privat fotograferingssession — inte en garanterad synlighet av norrsken.",
+                noticeReschedule: "Molnighet, väder eller säkerhetsförhållanden kan göra en session olämplig. Om det händer erbjuder vi ombokning under din vistelse eller till nästa lämpliga datum, i mån av tillgänglighet.",
+                bookingEyebrow: "Redo när himlen är det",
+                bookingTitle: "Berätta om ditt besök.",
+                bookingDesc: "Skicka dina datum, gruppstorlek och önskat paket. Vi svarar med tillgänglighet och nästa praktiska steg.",
+                bookingCta: "Mejla photos@borealone.com",
+                bookingNote: "Privata norrskenssessioner i svenska Lappland.",
+                footerRights: "© 2026 Boreal One AB. Med ensamrätt."
+            },
+            pt: {
+                navBack: "← Voltar ao Início",
+                navGallery: "Galeria da Lapônia →",
+                heroEyebrow: "Lapônia Sueca",
+                heroTitle: "Sessões Privadas de\nFotografia da Aurora Boreal",
+                heroDesc: "Uma lembrança tranquila e pessoal sob o céu ártico — planejada de acordo com as condições, sua estadia e a luz natural.",
+                heroCta: "Reservar uma sessão",
+                heroPackagesLink: "Conheça os pacotes",
+                heroNote: "Pessoal. Privado. Planejado conforme as condições.",
+                introEyebrow: "Sua noite, documentada com cuidado",
+                introTitle: "Mais do que uma foto do céu.",
+                introText1: "São sessões privadas e sem pressa para casais, famílias e pequenos grupos que querem levar uma lembrança verdadeira do seu tempo no Norte.",
+                introText2: "Eu cuido dos detalhes práticos — local, horário, poses simples e ajustes de câmera — para que vocês permaneçam presentes enquanto a noite ártica faz seu trabalho.",
+                introImageCaption: "Överkalix, Lapônia Sueca",
+                packagesEyebrow: "Escolha sua experiência",
+                packagesTitle: "Sessões privadas, preços simples.",
+                packagesDesc: "Todos os pacotes são privados e incluem planejamento cuidadoso conforme as condições locais.",
+                miniLabel: "Uma lembrança breve e bonita",
+                miniTitle: "Aurora Mini",
+                miniDesc: "Uma sessão privada simples para um casal ou uma família pequena que deseja algumas imagens duradouras sob a Aurora Boreal.",
+                miniItem1: "Até 20 minutos de fotografia",
+                miniItem2: "5 imagens digitais cuidadosamente editadas",
+                miniItem3: "Orientação simples de local e poses",
+                miniCta: "Consultar Aurora Mini",
+                experienceBadge: "Mais popular",
+                experienceLabel: "A noite completa",
+                experienceTitle: "Aurora Experience",
+                experienceDesc: "Nossa sessão privada mais equilibrada, com tempo para se acomodar, aproveitar a noite e criar uma seleção mais completa de imagens.",
+                experienceItem1: "60–90 minutos de fotografia",
+                experienceItem2: "15 imagens digitais cuidadosamente editadas",
+                experienceItem3: "Orientação tranquila para retratos e momentos espontâneos",
+                experienceCta: "Consultar Aurora Experience",
+                storyLabel: "Uma noite para se desdobrar",
+                storyTitle: "Aurora Story",
+                storyDesc: "Uma noite mais longa e planejada para quem deseja uma história mais completa da sua experiência no Ártico.",
+                storyItem1: "Até 2 horas de fotografia",
+                storyItem2: "30 imagens digitais cuidadosamente editadas",
+                storyItem3: "Mais tempo para local, retratos e atmosfera",
+                storyCta: "Consultar Aurora Story",
+                guestEyebrow: "Para hóspedes das acomodações Boreal One",
+                guestTitle: "Inclua a sessão naturalmente em sua estadia.",
+                guestDesc: "Você está hospedado na Boreal One? Podemos coordenar sua sessão com a chegada, seus planos e as melhores condições disponíveis durante a visita.",
+                guestItem1: "Planejamento fácil durante a estadia",
+                guestItem2: "Orientação local sobre o local",
+                guestItem3: "Uma experiência privada no seu ritmo",
+                guestCta: "Planeje sua estadia e sessão →",
+                noticeEyebrow: "Importante saber",
+                noticeTitle: "A Aurora é um fenômeno natural.",
+                noticeText: "Sua intensidade, visibilidade e cores nunca podem ser garantidas. Sua reserva é para uma sessão privada de fotografia — não para o aparecimento garantido da Aurora.",
+                noticeReschedule: "Nuvens, clima ou condições de segurança podem tornar uma sessão inadequada. Se isso acontecer, ofereceremos o reagendamento durante sua estadia ou para a próxima data adequada, sujeito à disponibilidade.",
+                bookingEyebrow: "Prontos quando o céu estiver",
+                bookingTitle: "Conte-nos sobre sua visita.",
+                bookingDesc: "Envie suas datas, tamanho do grupo e pacote preferido. Responderemos com disponibilidade e os próximos passos práticos.",
+                bookingCta: "Enviar e-mail para photos@borealone.com",
+                bookingNote: "Sessões privadas de Aurora na Lapônia Sueca.",
+                footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+            }
+        };
+
+        function setLanguage(lang) {
+            const content = translations[lang];
+            const textMap = {
+                'nav-back-link': content.navBack,
+                'nav-gallery-link': content.navGallery,
+                'hero-eyebrow': content.heroEyebrow,
+                'hero-title': content.heroTitle,
+                'hero-desc': content.heroDesc,
+                'hero-cta': content.heroCta,
+                'hero-packages-link': content.heroPackagesLink,
+                'hero-note': content.heroNote,
+                'intro-eyebrow': content.introEyebrow,
+                'intro-title': content.introTitle,
+                'intro-text-1': content.introText1,
+                'intro-text-2': content.introText2,
+                'intro-image-caption': content.introImageCaption,
+                'packages-eyebrow': content.packagesEyebrow,
+                'packages-title': content.packagesTitle,
+                'packages-desc': content.packagesDesc,
+                'mini-label': content.miniLabel,
+                'mini-title': content.miniTitle,
+                'mini-desc': content.miniDesc,
+                'mini-item-1': content.miniItem1,
+                'mini-item-2': content.miniItem2,
+                'mini-item-3': content.miniItem3,
+                'mini-cta': content.miniCta,
+                'experience-badge': content.experienceBadge,
+                'experience-label': content.experienceLabel,
+                'experience-title': content.experienceTitle,
+                'experience-desc': content.experienceDesc,
+                'experience-item-1': content.experienceItem1,
+                'experience-item-2': content.experienceItem2,
+                'experience-item-3': content.experienceItem3,
+                'experience-cta': content.experienceCta,
+                'story-label': content.storyLabel,
+                'story-title': content.storyTitle,
+                'story-desc': content.storyDesc,
+                'story-item-1': content.storyItem1,
+                'story-item-2': content.storyItem2,
+                'story-item-3': content.storyItem3,
+                'story-cta': content.storyCta,
+                'guest-eyebrow': content.guestEyebrow,
+                'guest-title': content.guestTitle,
+                'guest-desc': content.guestDesc,
+                'guest-item-1': content.guestItem1,
+                'guest-item-2': content.guestItem2,
+                'guest-item-3': content.guestItem3,
+                'guest-cta': content.guestCta,
+                'notice-eyebrow': content.noticeEyebrow,
+                'notice-title': content.noticeTitle,
+                'notice-text': content.noticeText,
+                'notice-reschedule': content.noticeReschedule,
+                'booking-eyebrow': content.bookingEyebrow,
+                'booking-title': content.bookingTitle,
+                'booking-desc': content.bookingDesc,
+                'booking-cta': content.bookingCta,
+                'booking-note': content.bookingNote,
+                'footer-rights': content.footerRights
+            };
+
+            Object.entries(textMap).forEach(([id, value]) => {
+                const element = document.getElementById(id);
+                if (element) element.textContent = value;
+            });
+
+            ['en', 'sv', 'pt'].forEach(l => {
+                const button = document.getElementById(`btn-${l}`);
+                if (button) {
+                    button.className = l === lang
+                        ? 'px-2 py-1 rounded transition text-white bg-gray-800'
+                        : 'px-2 py-1 rounded transition text-gray-400 hover:text-white';
+                }
+            });
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-lang');
+            const browserLang = navigator.language.substring(0, 2);
+            setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[browserLang] ? browserLang : 'en'));
+        });
+    </script>
+</body>
+</html>

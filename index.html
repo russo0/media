@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boreal One Media | Photography</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link class="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -109,12 +109,17 @@
                     <div class="w-full">
                         <h2 id="card2-title" class="text-xl md:text-2xl font-bold text-white mb-3">Belas Artes & Paisagens da Lapônia</h2>
                         <p id="card2-desc" class="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
-                            Fotografias de paisagem, fenômenos atmosféricos e a vida selvagem do norte feno-escandinavo.
+                            Paisagens Fine Art, fenômenos atmosféricos e sessões privadas de fotografia da Aurora Boreal na Lapônia Sueca.
                         </p>
                     </div>
-                    <a href="galeria.html" id="card2-btn" class="mt-auto inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-xl transition shadow-md">
-                        Explorar Galeria da Lapônia
-                    </a>
+                    <div class="mt-auto flex flex-col sm:flex-row gap-3 w-full">
+                        <a href="galeria.html" id="card2-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-xl transition shadow-md">
+                            Explorar Galeria da Lapônia
+                        </a>
+                        <a href="aurora-sessions.html" id="card2-session-btn" class="inline-flex items-center justify-center w-full sm:w-auto border border-aurora/40 text-aurora hover:bg-aurora/10 font-semibold text-sm px-6 py-3 rounded-xl transition">
+                            Sessões Privadas de Aurora
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -135,7 +140,7 @@
     <footer class="w-full py-12 text-center px-4 bg-[#070b14]">
         <div class="max-w-3xl mx-auto">
             <h2 id="footer-title" class="text-xl font-bold text-white mb-1">Vamos colaborar?</h2>
-            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.</p>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para orçamentos de fotografia imobiliária, comercial, licenciamento de imagens Fine Art ou sessões privadas de Aurora Boreal.</p>
             
             <a href="mailto:photos@borealone.com?subject=Inquiry%20from%20Portfolio" id="footer-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
                 Enviar um E-mail
@@ -161,12 +166,13 @@
                 card1Desc: "Professional photography for the real estate market, architecture, and property media solutions.",
                 card1Btn: "View Commercial Portfolio",
                 card2Title: "Fine Art & Lapland Landscapes",
-                card2Desc: "Landscape photography, atmospheric phenomena, and wildlife from the Fennoscandian north.",
+                card2Desc: "Fine Art landscapes, atmospheric phenomena, and private Northern Lights photography sessions in Swedish Lapland.",
                 card2Btn: "Explore Lapland Gallery",
+                card2SessionBtn: "Private Aurora Sessions",
                 aboutTitle: "Technical Precision & Visual Sensitivity",
                 aboutDesc: "Using high-resolution equipment and technical precision developed while capturing phenomena like the Northern Lights, I apply the same rigor to architectural imagery, emphasizing natural light and spatial geometry.",
                 footerTitle: "Let's work together?",
-                footerDesc: "Get in touch for real estate, commercial photography quotes, or Fine Art image licensing.",
+                footerDesc: "Get in touch for real estate, commercial photography quotes, Fine Art image licensing, or private Aurora sessions.",
                 footerBtn: "Send an Email",
                 footerNotice: "🔒 Note: Client delivery galleries are private and securely encrypted.",
                 footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
@@ -180,12 +186,13 @@
                 card1Desc: "Professionell fotografering för fastighetsmarknaden, arkitektur och fastighetsmedielösningar.",
                 card1Btn: "Visa Kommersiell Portfölj",
                 card2Title: "Fine Art & Lapplandslandskap",
-                card2Desc: "Landskapsfotografering, atmosfäriska fenomen och vilda djur från den fennoskandiska norden.",
+                card2Desc: "Fine Art-landskap, atmosfäriska fenomen och privata norrskensfotograferingar i svenska Lappland.",
                 card2Btn: "Utforska Lapplandssamlingen",
+                card2SessionBtn: "Privata norrskenssessioner",
                 aboutTitle: "Teknisk Precision & Visuell Känsla",
                 aboutDesc: "Med högupplöst utrustning och teknisk precision utvecklad under fångsten av fenomen som norrsken, tillämpar jag samma noggrannhet på arkitektoniska bilder, med fokus på naturligt ljus och rymdgeometri.",
                 footerTitle: "Ska vi samarbeta?",
-                footerDesc: "Kontakta oss för offerter gällande fastighets- och kommersiell fotografering eller licensiering av Fine Art-bilder.",
+                footerDesc: "Kontakta oss för offerter gällande fastighets- och kommersiell fotografering, licensiering av Fine Art-bilder eller privata norrskenssessioner.",
                 footerBtn: "Skicka ett mejl",
                 footerNotice: "🔒 Obs: Gallerier för kundleverans är privata och säkert krypterade.",
                 footerRights: "© 2026 Boreal One AB. Med ensamrätt."
@@ -196,15 +203,16 @@
                 heroTitle: "Capturando a luz e a atmosfera do Norte.",
                 heroDesc: "Da imensidão do céu ártico ao conforto do seu lar.",
                 card1Title: "Fotografia Imobiliária & Comercial",
-                card1Desc: "Fotografia profissional para o mercado imobiliário, architecture e soluções de mídia para propriedades.",
+                card1Desc: "Fotografia profissional para o mercado imobiliário, arquitetura e soluções de mídia para propriedades.",
                 card1Btn: "Ver Portfólio Comercial",
                 card2Title: "Belas Artes & Paisagens da Lapônia",
-                card2Desc: "Fotografias de paisagem, fenômenos atmosféricos e a vida selvagem do norte feno-escandinavo.",
+                card2Desc: "Paisagens Fine Art, fenômenos atmosféricos e sessões privadas de fotografia da Aurora Boreal na Lapônia Sueca.",
                 card2Btn: "Explorar Galeria da Lapônia",
+                card2SessionBtn: "Sessões Privadas de Aurora",
                 aboutTitle: "Rigor Técnico & Sensibilidade Visual",
                 aboutDesc: "Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.",
                 footerTitle: "Vamos colaborar?",
-                footerDesc: "Entre em contato para orçamentos de fotografia imobiliária, comercial ou licenciamento de imagens Fine Art.",
+                footerDesc: "Entre em contato para orçamentos de fotografia imobiliária, comercial, licenciamento de imagens Fine Art ou sessões privadas de Aurora Boreal.",
                 footerBtn: "Enviar um E-mail",
                 footerNotice: "🔒 Nota: As galerias de entrega para clientes são privadas e protegidas por criptografia.",
                 footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
@@ -222,6 +230,7 @@
             if(document.getElementById('card2-title')) document.getElementById('card2-title').textContent = translations[lang].card2Title;
             if(document.getElementById('card2-desc')) document.getElementById('card2-desc').textContent = translations[lang].card2Desc;
             if(document.getElementById('card2-btn')) document.getElementById('card2-btn').textContent = translations[lang].card2Btn;
+            if(document.getElementById('card2-session-btn')) document.getElementById('card2-session-btn').textContent = translations[lang].card2SessionBtn;
             if(document.getElementById('about-title')) document.getElementById('about-title').textContent = translations[lang].aboutTitle;
             if(document.getElementById('about-desc')) document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
             if(document.getElementById('footer-title')) document.getElementById('footer-title').textContent = translations[lang].footerTitle;

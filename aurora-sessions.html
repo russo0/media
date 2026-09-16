@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Private Northern Lights photography sessions and guided Aurora tours in Swedish Lapland.">
+    <meta name="description" content="Private Northern Lights photography sessions and private Aurora chases in Swedish Lapland.">
     <title>Private Aurora Experiences | Boreal One Media</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
@@ -20,8 +20,21 @@
             }
         }
     </script>
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            .aurora-background-video {
+                display: none;
+            }
+        }
+    </style>
 </head>
-<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col overflow-x-hidden">
+<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col overflow-x-hidden relative">
+
+    <div aria-hidden="true" class="fixed inset-0 z-[-3] bg-cover bg-center" style="background-image: url('images/hero_aurora.jpg');"></div>
+    <video autoplay loop muted playsinline poster="images/hero_aurora.jpg" aria-hidden="true" class="aurora-background-video fixed inset-0 w-full h-full object-cover z-[-2] pointer-events-none">
+        <source src="https://borealone.com/images/aurora.mp4" type="video/mp4">
+    </video>
+    <div aria-hidden="true" class="fixed inset-0 bg-[#040812]/70 z-[-1] pointer-events-none"></div>
 
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
@@ -44,15 +57,14 @@
     </nav>
 
     <header class="relative min-h-[560px] sm:min-h-[620px] flex items-center border-b border-gray-900 overflow-hidden">
-        <img src="images/hero_aurora.jpg" alt="Northern Lights over Swedish Lapland" class="absolute inset-0 h-full w-full object-cover object-center" id="hero-image">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#070b14]/70 via-[#070b14]/45 to-[#070b14]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#070b14]/50 via-[#070b14]/20 to-[#070b14]/80"></div>
         <div class="relative z-10 max-w-5xl mx-auto w-full px-4 pt-20 pb-24 text-center">
             <span id="hero-eyebrow" class="inline-block text-aurora text-xs font-bold tracking-[0.18em] uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">Swedish Lapland</span>
             <h1 id="hero-title" class="whitespace-pre-line text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-tight leading-tight mt-6 mb-5">Private Northern Lights
 Experiences</h1>
-            <p id="hero-desc" class="text-gray-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto">Choose a private photography session near your stay or a guided Aurora tour planned around the night's conditions.</p>
+            <p id="hero-desc" class="text-gray-200 text-base md:text-xl font-light leading-relaxed max-w-2xl mx-auto">Choose a private photography session near your stay or a private Aurora chase planned around the night's conditions.</p>
             <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a href="#tours" id="hero-cta" class="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Explore private tours</a>
+                <a href="#tours" id="hero-cta" class="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Explore private chases</a>
                 <a href="#packages" id="hero-packages-link" class="w-full sm:w-auto inline-flex items-center justify-center border border-white/20 hover:border-white/50 bg-black/10 hover:bg-black/25 text-white font-semibold text-sm px-7 py-3.5 rounded-xl transition">Photography packages</a>
             </div>
             <p id="hero-note" class="mt-5 text-xs text-gray-300/90 tracking-wide">Personal. Private. Planned for the conditions.</p>
@@ -71,7 +83,7 @@ Experiences</h1>
                     <p id="intro-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">Your evening, thoughtfully documented</p>
                     <h2 id="intro-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-5">A private evening, in the way that fits you.</h2>
                     <p id="intro-text-1" class="text-gray-300 text-base leading-relaxed mb-4">Choose a calm photography session close to your stay, or a longer guided tour for a more active search beneath the Arctic sky.</p>
-                    <p id="intro-text-2" class="text-gray-400 text-sm md:text-base leading-relaxed">I take care of the practical details: location, timing, simple posing, camera guidance, and for tours, a route shaped by the latest forecast.</p>
+                    <p id="intro-text-2" class="text-gray-400 text-sm md:text-base leading-relaxed">I take care of the practical details: location, timing, simple posing, camera guidance, and for chases, a route shaped by the latest forecast.</p>
                 </div>
             </div>
         </section>

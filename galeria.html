@@ -199,7 +199,7 @@
             
             document.getElementById('lightbox-img').src = img.src;
             document.getElementById('lightbox-img').alt = img.alt;
-            document.getElementById('lightbox-caption').textContent = img.alt + (caption ? ` — ${caption}` : "");
+            document.getElementById('lightbox-caption').textContent = img.alt + (caption ? `, ${caption}` : "");
             
             document.getElementById('lightbox').classList.remove('hidden');
             document.body.style.overflow = 'hidden'; // Trava a rolagem da página ao fundo

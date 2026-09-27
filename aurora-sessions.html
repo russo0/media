@@ -43,10 +43,10 @@
                 <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
             </a>
 
-            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
-                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 order-2 sm:order-3" aria-label="Language selector">
+                <button type="button" onclick="setLanguage('en')" id="btn-en" class="p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800" aria-label="English" aria-pressed="true"><img src="https://borealone.com/arrival/flags/uk.svg" alt="" class="w-6 h-6 rounded-full"></button>
+                <button type="button" onclick="setLanguage('sv')" id="btn-sv" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Svenska" aria-pressed="false"><img src="https://borealone.com/arrival/flags/sweden.svg" alt="" class="w-6 h-6 rounded-full"></button>
+                <button type="button" onclick="setLanguage('pt')" id="btn-pt" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Português do Brasil" aria-pressed="false"><img src="https://borealone.com/arrival/flags/brazil.svg" alt="" class="w-6 h-6 rounded-full"></button>
             </div>
 
             <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
@@ -586,13 +586,15 @@ Experiences</h1>
                 const element = document.getElementById(id);
                 if (element) element.textContent = value;
             });
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
 
             ['en', 'sv', 'pt'].forEach(l => {
                 const button = document.getElementById(`btn-${l}`);
                 if (button) {
                     button.className = l === lang
-                        ? 'px-2 py-1 rounded transition text-white bg-gray-800'
-                        : 'px-2 py-1 rounded transition text-gray-400 hover:text-white';
+                        ? 'p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800'
+                        : 'p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70';
+                    button.setAttribute('aria-pressed', String(l === lang));
                 }
             });
             localStorage.setItem('preferred-lang', lang);
